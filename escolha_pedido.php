@@ -478,11 +478,11 @@ if(isset($_SESSION['admin'])){
         
                                                         </div>
         
-                                                        <div class="col-6 col-sm-3">
-        
+                                                        <div class="col-6 col-sm-2">
+                                                            
                                                         </div>
-                                                        <div class="col-6 col-md-1">
-        
+                                                        <div class="col-6 col-md-2">
+                                                            
                                                         </div>
                                                         <div class="col-6 col-md-1">
                                                             <section class="section">
@@ -5290,7 +5290,12 @@ if(isset($_SESSION['admin'])){
                     }
                     document.getElementById(cityName).style.display = "block";
                     evt.currentTarget.className += " active";
-                }
+                };
+
+                function Voltar(){
+                    location.href="endereco.php";
+                };
+
                 </script>
 
                 <script>

@@ -253,7 +253,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                 if(isset($_POST['frutas'])){
                                     $opcoes = $_POST['frutas'];
                                     $opcoes_fruta = implode("<br>", $opcoes);
-                                    $opcoes_fruta_bd = implode("\n      ", $opcoes);
+                                    $opcoes_fruta_bd = implode("\n    ", $opcoes);
                                     $_SESSION['frutasBD'] = $opcoes_fruta_bd;
                                     $_SESSION['frutas'] = $opcoes_fruta;
                                     
@@ -268,7 +268,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                 if(isset($_POST['caldas'])){
                                     $opcoes2 = $_POST['caldas'];
                                     $opcoes_calda = implode("<br>", $opcoes2);
-                                    $opcoes_calda_bd = implode("\n      ", $opcoes2);
+                                    $opcoes_calda_bd = implode("\n    ", $opcoes2);
                                     $_SESSION['caldas'] = $opcoes_calda;
                                     $_SESSION['caldasBD'] = $opcoes_calda_bd;
                                     foreach ($_POST['caldas'] as $caldas) {
@@ -282,7 +282,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                 if(isset($_POST['complementos'])){
                                     $opcoes3 = $_POST['complementos'];
                                     $opcoes_comple = implode("<br>", $opcoes3);
-                                    $opcoes_comple_bd = implode("\n     ", $opcoes3);
+                                    $opcoes_comple_bd = implode("\n    ", $opcoes3);
                                     $_SESSION['complementos'] = $opcoes_comple;
                                     $_SESSION['complementosBD'] = $opcoes_comple_bd;
                                     foreach ($_POST['complementos'] as $complementos) {
@@ -401,7 +401,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_2'])){
                                         $opcoes_2 = $_POST['frutas_2'];
                                         $opcoes_fruta_2 = implode("<br>", $opcoes_2);
-                                        $opcoes_fruta_bd_2 = implode("\n   ", $opcoes_2);
+                                        $opcoes_fruta_bd_2 = implode("\n    ", $opcoes_2);
                                         $_SESSION['frutasBD_2'] = $opcoes_fruta_bd_2;
                                         $_SESSION['frutas_2'] = $opcoes_fruta_2;
                                         
@@ -416,7 +416,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_2'])){
                                         $opcoes2_2 = $_POST['caldas_2'];
                                         $opcoes_calda_2 = implode("<br>", $opcoes2_2);
-                                        $opcoes_calda_bd_2 = implode("\n   ", $opcoes2_2);
+                                        $opcoes_calda_bd_2 = implode("\n    ", $opcoes2_2);
                                         $_SESSION['caldas_2'] = $opcoes_calda_2;
                                         $_SESSION['caldasBD_2'] = $opcoes_calda_bd_2;
                                         foreach ($_POST['caldas_2'] as $caldas_2) {
@@ -430,7 +430,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_2'])){
                                         $opcoes3_2 = $_POST['complementos_2'];
                                         $opcoes_comple_2 = implode("<br>", $opcoes3_2);
-                                        $opcoes_comple_bd_2 = implode("\n   ", $opcoes3_2);
+                                        $opcoes_comple_bd_2 = implode("\n    ", $opcoes3_2);
                                         $_SESSION['complementos_2'] = $opcoes_comple_2;
                                         $_SESSION['complementosBD_2'] = $opcoes_comple_bd_2;
                                         foreach ($_POST['complementos_2'] as $complementos_2) {
@@ -557,7 +557,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_3'])){
                                         $opcoes_3 = $_POST['frutas_3'];
                                         $opcoes_fruta_3 = implode("<br>", $opcoes_3);
-                                        $opcoes_fruta_bd_3 = implode("\n   ", $opcoes_3);
+                                        $opcoes_fruta_bd_3 = implode("\n    ", $opcoes_3);
                                         $_SESSION['frutasBD_3'] = $opcoes_fruta_bd_3;
                                         $_SESSION['frutas_3'] = $opcoes_fruta_3;
                                         
@@ -572,7 +572,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_3'])){
                                         $opcoes2_3 = $_POST['caldas_3'];
                                         $opcoes_calda_3 = implode("<br>", $opcoes2_3);
-                                        $opcoes_calda_bd_3 = implode("\n   ", $opcoes2_3);
+                                        $opcoes_calda_bd_3 = implode("\n    ", $opcoes2_3);
                                         $_SESSION['caldas_3'] = $opcoes_calda_3;
                                         $_SESSION['caldasBD_3'] = $opcoes_calda_bd_3;
                                         foreach ($_POST['caldas_3'] as $caldas_3) {
@@ -586,7 +586,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_3'])){
                                         $opcoes3_3 = $_POST['complementos_3'];
                                         $opcoes_comple_3 = implode("<br>", $opcoes3_3);
-                                        $opcoes_comple_bd_3 = implode("\n   ", $opcoes3_3);
+                                        $opcoes_comple_bd_3 = implode("\n    ", $opcoes3_3);
                                         $_SESSION['complementos_3'] = $opcoes_comple_3;
                                         $_SESSION['complementosBD_3'] = $opcoes_comple_bd_3;
                                         foreach ($_POST['complementos_3'] as $complementos_3) {
@@ -713,7 +713,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_4'])){
                                         $opcoes_4 = $_POST['frutas_4'];
                                         $opcoes_fruta_4 = implode("<br>", $opcoes_4);
-                                        $opcoes_fruta_bd_4 = implode("\n   ", $opcoes_4);
+                                        $opcoes_fruta_bd_4 = implode("\n    ", $opcoes_4);
                                         $_SESSION['frutasBD_4'] = $opcoes_fruta_bd_4;
                                         $_SESSION['frutas_4'] = $opcoes_fruta_4;
                                         
@@ -728,7 +728,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_4'])){
                                         $opcoes2_4 = $_POST['caldas_4'];
                                         $opcoes_calda_4 = implode("<br>", $opcoes2_4);
-                                        $opcoes_calda_bd_4 = implode("\n   ", $opcoes2_4);
+                                        $opcoes_calda_bd_4 = implode("\n    ", $opcoes2_4);
                                         $_SESSION['caldas_4'] = $opcoes_calda_4;
                                         $_SESSION['caldasBD_4'] = $opcoes_calda_bd_4;
                                         foreach ($_POST['caldas_4'] as $caldas_4) {
@@ -742,7 +742,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_4'])){
                                         $opcoes3_4 = $_POST['complementos_4'];
                                         $opcoes_comple_4 = implode("<br>", $opcoes3_4);
-                                        $opcoes_comple_bd_4 = implode("\n   ", $opcoes3_4);
+                                        $opcoes_comple_bd_4 = implode("\n    ", $opcoes3_4);
                                         $_SESSION['complementos_4'] = $opcoes_comple_4;
                                         $_SESSION['complementosBD_4'] = $opcoes_comple_bd_4;
                                         foreach ($_POST['complementos_4'] as $complementos_4) {
@@ -870,7 +870,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_5'])){
                                         $opcoes_5 = $_POST['frutas_5'];
                                         $opcoes_fruta_5 = implode("<br>", $opcoes_5);
-                                        $opcoes_fruta_bd_5 = implode("\n   ", $opcoes_5);
+                                        $opcoes_fruta_bd_5 = implode("\n    ", $opcoes_5);
                                         $_SESSION['frutasBD_5'] = $opcoes_fruta_bd_5;
                                         $_SESSION['frutas_5'] = $opcoes_fruta_5;
                                         
@@ -885,7 +885,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_5'])){
                                         $opcoes2_5 = $_POST['caldas_5'];
                                         $opcoes_calda_5 = implode("<br>", $opcoes2_5);
-                                        $opcoes_calda_bd_5 = implode("\n   ", $opcoes2_5);
+                                        $opcoes_calda_bd_5 = implode("\n    ", $opcoes2_5);
                                         $_SESSION['caldas_5'] = $opcoes_calda_5;
                                         $_SESSION['caldasBD_5'] = $opcoes_calda_bd_5;
                                         foreach ($_POST['caldas_5'] as $caldas_5) {
@@ -899,7 +899,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_5'])){
                                         $opcoes3_5 = $_POST['complementos_5'];
                                         $opcoes_comple_5 = implode("<br>", $opcoes3_5);
-                                        $opcoes_comple_bd_5 = implode("\n   ", $opcoes3_5);
+                                        $opcoes_comple_bd_5 = implode("\n    ", $opcoes3_5);
                                         $_SESSION['complementos_5'] = $opcoes_comple_5;
                                         $_SESSION['complementosBD_5'] = $opcoes_comple_bd_5;
                                         foreach ($_POST['complementos_5'] as $complementos_5) {
@@ -1026,7 +1026,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_6'])){
                                         $opcoes_6 = $_POST['frutas_6'];
                                         $opcoes_fruta_6 = implode("<br>", $opcoes_6);
-                                        $opcoes_fruta_bd_6 = implode("\n   ", $opcoes_6);
+                                        $opcoes_fruta_bd_6 = implode("\n    ", $opcoes_6);
                                         $_SESSION['frutasBD_6'] = $opcoes_fruta_bd_6;
                                         $_SESSION['frutas_6'] = $opcoes_fruta_6;
                                         
@@ -1041,7 +1041,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_6'])){
                                         $opcoes2_6 = $_POST['caldas_6'];
                                         $opcoes_calda_6 = implode("<br>", $opcoes2_6);
-                                        $opcoes_calda_bd_6 = implode("\n   ", $opcoes2_6);
+                                        $opcoes_calda_bd_6 = implode("\n    ", $opcoes2_6);
                                         $_SESSION['caldas_6'] = $opcoes_calda_6;
                                         $_SESSION['caldasBD_6'] = $opcoes_calda_bd_6;
                                         foreach ($_POST['caldas_6'] as $caldas_6) {
@@ -1055,7 +1055,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_6'])){
                                         $opcoes3_6 = $_POST['complementos_6'];
                                         $opcoes_comple_6 = implode("<br>", $opcoes3_6);
-                                        $opcoes_comple_bd_6 = implode("\n   ", $opcoes3_6);
+                                        $opcoes_comple_bd_6 = implode("\n    ", $opcoes3_6);
                                         $_SESSION['complementos_6'] = $opcoes_comple_6;
                                         $_SESSION['complementosBD_6'] = $opcoes_comple_bd_6;
                                         foreach ($_POST['complementos_6'] as $complementos_6) {
@@ -1182,7 +1182,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_7'])){
                                         $opcoes_7 = $_POST['frutas_7'];
                                         $opcoes_fruta_7 = implode("<br>", $opcoes_7);
-                                        $opcoes_fruta_bd_7 = implode("\n   ", $opcoes_7);
+                                        $opcoes_fruta_bd_7 = implode("\n    ", $opcoes_7);
                                         $_SESSION['frutasBD_7'] = $opcoes_fruta_bd_7;
                                         $_SESSION['frutas_7'] = $opcoes_fruta_7;
                                         
@@ -1197,7 +1197,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_7'])){
                                         $opcoes2_7 = $_POST['caldas_7'];
                                         $opcoes_calda_7 = implode("<br>", $opcoes2_7);
-                                        $opcoes_calda_bd_7 = implode("\n   ", $opcoes2_7);
+                                        $opcoes_calda_bd_7 = implode("\n    ", $opcoes2_7);
                                         $_SESSION['caldas_7'] = $opcoes_calda_7;
                                         $_SESSION['caldasBD_7'] = $opcoes_calda_bd_7;
                                         foreach ($_POST['caldas_7'] as $caldas_7) {
@@ -1211,7 +1211,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_7'])){
                                         $opcoes3_7 = $_POST['complementos_7'];
                                         $opcoes_comple_7 = implode("<br>", $opcoes3_7);
-                                        $opcoes_comple_bd_7 = implode("\n   ", $opcoes3_7);
+                                        $opcoes_comple_bd_7 = implode("\n    ", $opcoes3_7);
                                         $_SESSION['complementos_7'] = $opcoes_comple_7;
                                         $_SESSION['complementosBD_7'] = $opcoes_comple_bd_7;
                                         foreach ($_POST['complementos_7'] as $complementos_7) {
@@ -1338,7 +1338,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_8'])){
                                         $opcoes_8 = $_POST['frutas_8'];
                                         $opcoes_fruta_8 = implode("<br>", $opcoes_8);
-                                        $opcoes_fruta_bd_8 = implode("\n   ", $opcoes_8);
+                                        $opcoes_fruta_bd_8 = implode("\n    ", $opcoes_8);
                                         $_SESSION['frutasBD_8'] = $opcoes_fruta_bd_8;
                                         $_SESSION['frutas_8'] = $opcoes_fruta_8;
                                         
@@ -1353,7 +1353,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_8'])){
                                         $opcoes2_8 = $_POST['caldas_8'];
                                         $opcoes_calda_8 = implode("<br>", $opcoes2_8);
-                                        $opcoes_calda_bd_8 = implode("\n   ", $opcoes2_8);
+                                        $opcoes_calda_bd_8 = implode("\n    ", $opcoes2_8);
                                         $_SESSION['caldas_8'] = $opcoes_calda_8;
                                         $_SESSION['caldasBD_8'] = $opcoes_calda_bd_8;
                                         foreach ($_POST['caldas_8'] as $caldas_8) {
@@ -1367,7 +1367,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_8'])){
                                         $opcoes3_8 = $_POST['complementos_8'];
                                         $opcoes_comple_8 = implode("<br>", $opcoes3_8);
-                                        $opcoes_comple_bd_8 = implode("\n   ", $opcoes3_8);
+                                        $opcoes_comple_bd_8 = implode("\n    ", $opcoes3_8);
                                         $_SESSION['complementos_8'] = $opcoes_comple_8;
                                         $_SESSION['complementosBD_8'] = $opcoes_comple_bd_8;
                                         foreach ($_POST['complementos_8'] as $complementos_8) {
@@ -1494,7 +1494,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_9'])){
                                         $opcoes_9 = $_POST['frutas_9'];
                                         $opcoes_fruta_9 = implode("<br>", $opcoes_9);
-                                        $opcoes_fruta_bd_9 = implode("\n   ", $opcoes_9);
+                                        $opcoes_fruta_bd_9 = implode("\n    ", $opcoes_9);
                                         $_SESSION['frutasBD_9'] = $opcoes_fruta_bd_9;
                                         $_SESSION['frutas_9'] = $opcoes_fruta_9;
                                         
@@ -1509,7 +1509,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_9'])){
                                         $opcoes2_9 = $_POST['caldas_9'];
                                         $opcoes_calda_9 = implode("<br>", $opcoes2_9);
-                                        $opcoes_calda_bd_9 = implode("\n   ", $opcoes2_9);
+                                        $opcoes_calda_bd_9 = implode("\n    ", $opcoes2_9);
                                         $_SESSION['caldas_9'] = $opcoes_calda_9;
                                         $_SESSION['caldasBD_9'] = $opcoes_calda_bd_9;
                                         foreach ($_POST['caldas_9'] as $caldas_9) {
@@ -1523,7 +1523,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_9'])){
                                         $opcoes3_9 = $_POST['complementos_9'];
                                         $opcoes_comple_9 = implode("<br>", $opcoes3_9);
-                                        $opcoes_comple_bd_9 = implode("\n   ", $opcoes3_9);
+                                        $opcoes_comple_bd_9 = implode("\n    ", $opcoes3_9);
                                         $_SESSION['complementos_9'] = $opcoes_comple_9;
                                         $_SESSION['complementosBD_9'] = $opcoes_comple_bd_9;
                                         foreach ($_POST['complementos_9'] as $complementos_9) {
@@ -1650,7 +1650,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_10'])){
                                         $opcoes_10 = $_POST['frutas_10'];
                                         $opcoes_fruta_10 = implode("<br>", $opcoes_10);
-                                        $opcoes_fruta_bd_10 = implode("\n   ", $opcoes_10);
+                                        $opcoes_fruta_bd_10 = implode("\n    ", $opcoes_10);
                                         $_SESSION['frutasBD_10'] = $opcoes_fruta_bd_10;
                                         $_SESSION['frutas_10'] = $opcoes_fruta_10;
                                         
@@ -1665,7 +1665,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_10'])){
                                         $opcoes2_10 = $_POST['caldas_10'];
                                         $opcoes_calda_10 = implode("<br>", $opcoes2_10);
-                                        $opcoes_calda_bd_10 = implode("\n   ", $opcoes2_10);
+                                        $opcoes_calda_bd_10 = implode("\n    ", $opcoes2_10);
                                         $_SESSION['caldas_10'] = $opcoes_calda_10;
                                         $_SESSION['caldasBD_10'] = $opcoes_calda_bd_10;
                                         foreach ($_POST['caldas_10'] as $caldas_10) {
@@ -1679,7 +1679,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_10'])){
                                         $opcoes3_10 = $_POST['complementos_10'];
                                         $opcoes_comple_10 = implode("<br>", $opcoes3_10);
-                                        $opcoes_comple_bd_10 = implode("\n   ", $opcoes3_10);
+                                        $opcoes_comple_bd_10 = implode("\n    ", $opcoes3_10);
                                         $_SESSION['complementos_10'] = $opcoes_comple_10;
                                         $_SESSION['complementosBD_10'] = $opcoes_comple_bd_10;
                                         foreach ($_POST['complementos_10'] as $complementos_10) {
@@ -1806,7 +1806,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_11'])){
                                         $opcoes_11 = $_POST['frutas_11'];
                                         $opcoes_fruta_11 = implode("<br>", $opcoes_11);
-                                        $opcoes_fruta_bd_11 = implode("\n   ", $opcoes_11);
+                                        $opcoes_fruta_bd_11 = implode("\n    ", $opcoes_11);
                                         $_SESSION['frutasBD_11'] = $opcoes_fruta_bd_11;
                                         $_SESSION['frutas_11'] = $opcoes_fruta_11;
                                         
@@ -1821,7 +1821,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_11'])){
                                         $opcoes2_11 = $_POST['caldas_11'];
                                         $opcoes_calda_11 = implode("<br>", $opcoes2_11);
-                                        $opcoes_calda_bd_11 = implode("\n   ", $opcoes2_11);
+                                        $opcoes_calda_bd_11 = implode("\n    ", $opcoes2_11);
                                         $_SESSION['caldas_11'] = $opcoes_calda_11;
                                         $_SESSION['caldasBD_11'] = $opcoes_calda_bd_11;
                                         foreach ($_POST['caldas_11'] as $caldas_11) {
@@ -1835,7 +1835,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_11'])){
                                         $opcoes3_11 = $_POST['complementos_11'];
                                         $opcoes_comple_11 = implode("<br>", $opcoes3_11);
-                                        $opcoes_comple_bd_11 = implode("\n   ", $opcoes3_11);
+                                        $opcoes_comple_bd_11 = implode("\n    ", $opcoes3_11);
                                         $_SESSION['complementos_11'] = $opcoes_comple_11;
                                         $_SESSION['complementosBD_11'] = $opcoes_comple_bd_11;
                                         foreach ($_POST['complementos_11'] as $complementos_11) {
@@ -1962,7 +1962,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_12'])){
                                         $opcoes_12 = $_POST['frutas_12'];
                                         $opcoes_fruta_12 = implode("<br>", $opcoes_12);
-                                        $opcoes_fruta_bd_12 = implode("\n   ", $opcoes_12);
+                                        $opcoes_fruta_bd_12 = implode("\n    ", $opcoes_12);
                                         $_SESSION['frutasBD_12'] = $opcoes_fruta_bd_12;
                                         $_SESSION['frutas_12'] = $opcoes_fruta_12;
                                         
@@ -1977,7 +1977,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_12'])){
                                         $opcoes2_12 = $_POST['caldas_12'];
                                         $opcoes_calda_12 = implode("<br>", $opcoes2_12);
-                                        $opcoes_calda_bd_12 = implode("\n   ", $opcoes2_12);
+                                        $opcoes_calda_bd_12 = implode("\n    ", $opcoes2_12);
                                         $_SESSION['caldas_12'] = $opcoes_calda_12;
                                         $_SESSION['caldasBD_12'] = $opcoes_calda_bd_12;
                                         foreach ($_POST['caldas_12'] as $caldas_12) {
@@ -1991,7 +1991,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_12'])){
                                         $opcoes3_12 = $_POST['complementos_12'];
                                         $opcoes_comple_12 = implode("<br>", $opcoes3_12);
-                                        $opcoes_comple_bd_12 = implode("\n   ", $opcoes3_12);
+                                        $opcoes_comple_bd_12 = implode("\n    ", $opcoes3_12);
                                         $_SESSION['complementos_12'] = $opcoes_comple_12;
                                         $_SESSION['complementosBD_12'] = $opcoes_comple_bd_12;
                                         foreach ($_POST['complementos_12'] as $complementos_12) {
@@ -2118,7 +2118,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_13'])){
                                         $opcoes_13 = $_POST['frutas_13'];
                                         $opcoes_fruta_13 = implode("<br>", $opcoes_13);
-                                        $opcoes_fruta_bd_13 = implode("\n   ", $opcoes_13);
+                                        $opcoes_fruta_bd_13 = implode("\n    ", $opcoes_13);
                                         $_SESSION['frutasBD_13'] = $opcoes_fruta_bd_13;
                                         $_SESSION['frutas_13'] = $opcoes_fruta_13;
                                         
@@ -2133,7 +2133,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_13'])){
                                         $opcoes2_13 = $_POST['caldas_13'];
                                         $opcoes_calda_13 = implode("<br>", $opcoes2_13);
-                                        $opcoes_calda_bd_13 = implode("\n   ", $opcoes2_13);
+                                        $opcoes_calda_bd_13 = implode("\n    ", $opcoes2_13);
                                         $_SESSION['caldas_13'] = $opcoes_calda_13;
                                         $_SESSION['caldasBD_13'] = $opcoes_calda_bd_13;
                                         foreach ($_POST['caldas_13'] as $caldas_13) {
@@ -2147,7 +2147,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_13'])){
                                         $opcoes3_13 = $_POST['complementos_13'];
                                         $opcoes_comple_13 = implode("<br>", $opcoes3_13);
-                                        $opcoes_comple_bd_13 = implode("\n   ", $opcoes3_13);
+                                        $opcoes_comple_bd_13 = implode("\n    ", $opcoes3_13);
                                         $_SESSION['complementos_13'] = $opcoes_comple_13;
                                         $_SESSION['complementosBD_13'] = $opcoes_comple_bd_13;
                                         foreach ($_POST['complementos_13'] as $complementos_13) {
@@ -2274,7 +2274,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_14'])){
                                         $opcoes_14 = $_POST['frutas_14'];
                                         $opcoes_fruta_14 = implode("<br>", $opcoes_14);
-                                        $opcoes_fruta_bd_14 = implode("\n   ", $opcoes_14);
+                                        $opcoes_fruta_bd_14 = implode("\n    ", $opcoes_14);
                                         $_SESSION['frutasBD_14'] = $opcoes_fruta_bd_14;
                                         $_SESSION['frutas_14'] = $opcoes_fruta_14;
                                         
@@ -2289,7 +2289,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_14'])){
                                         $opcoes2_14 = $_POST['caldas_14'];
                                         $opcoes_calda_14 = implode("<br>", $opcoes2_14);
-                                        $opcoes_calda_bd_14 = implode("\n   ", $opcoes2_14);
+                                        $opcoes_calda_bd_14 = implode("\n    ", $opcoes2_14);
                                         $_SESSION['caldas_14'] = $opcoes_calda_14;
                                         $_SESSION['caldasBD_14'] = $opcoes_calda_bd_14;
                                         foreach ($_POST['caldas_14'] as $caldas_14) {
@@ -2303,7 +2303,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_14'])){
                                         $opcoes3_14 = $_POST['complementos_14'];
                                         $opcoes_comple_14 = implode("<br>", $opcoes3_14);
-                                        $opcoes_comple_bd_14 = implode("\n   ", $opcoes3_14);
+                                        $opcoes_comple_bd_14 = implode("\n    ", $opcoes3_14);
                                         $_SESSION['complementos_14'] = $opcoes_comple_14;
                                         $_SESSION['complementosBD_14'] = $opcoes_comple_bd_14;
                                         foreach ($_POST['complementos_14'] as $complementos_14) {
@@ -2430,7 +2430,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_15'])){
                                         $opcoes_15 = $_POST['frutas_15'];
                                         $opcoes_fruta_15 = implode("<br>", $opcoes_15);
-                                        $opcoes_fruta_bd_15 = implode("\n   ", $opcoes_15);
+                                        $opcoes_fruta_bd_15 = implode("\n    ", $opcoes_15);
                                         $_SESSION['frutasBD_15'] = $opcoes_fruta_bd_15;
                                         $_SESSION['frutas_15'] = $opcoes_fruta_15;
                                         
@@ -2445,7 +2445,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_15'])){
                                         $opcoes2_15 = $_POST['caldas_15'];
                                         $opcoes_calda_15 = implode("<br>", $opcoes2_15);
-                                        $opcoes_calda_bd_15 = implode("\n   ", $opcoes2_15);
+                                        $opcoes_calda_bd_15 = implode("\n    ", $opcoes2_15);
                                         $_SESSION['caldas_15'] = $opcoes_calda_15;
                                         $_SESSION['caldasBD_15'] = $opcoes_calda_bd_15;
                                         foreach ($_POST['caldas_15'] as $caldas_15) {
@@ -2459,7 +2459,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_15'])){
                                         $opcoes3_15 = $_POST['complementos_15'];
                                         $opcoes_comple_15 = implode("<br>", $opcoes3_15);
-                                        $opcoes_comple_bd_15 = implode("\n   ", $opcoes3_15);
+                                        $opcoes_comple_bd_15 = implode("\n    ", $opcoes3_15);
                                         $_SESSION['complementos_15'] = $opcoes_comple_15;
                                         $_SESSION['complementosBD_15'] = $opcoes_comple_bd_15;
                                         foreach ($_POST['complementos_15'] as $complementos_15) {
@@ -2586,7 +2586,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_16'])){
                                         $opcoes_16 = $_POST['frutas_16'];
                                         $opcoes_fruta_16 = implode("<br>", $opcoes_16);
-                                        $opcoes_fruta_bd_16 = implode("\n   ", $opcoes_16);
+                                        $opcoes_fruta_bd_16 = implode("\n    ", $opcoes_16);
                                         $_SESSION['frutasBD_16'] = $opcoes_fruta_bd_16;
                                         $_SESSION['frutas_16'] = $opcoes_fruta_16;
                                         
@@ -2601,7 +2601,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_16'])){
                                         $opcoes2_16 = $_POST['caldas_16'];
                                         $opcoes_calda_16 = implode("<br>", $opcoes2_16);
-                                        $opcoes_calda_bd_16 = implode("\n   ", $opcoes2_16);
+                                        $opcoes_calda_bd_16 = implode("\n    ", $opcoes2_16);
                                         $_SESSION['caldas_16'] = $opcoes_calda_16;
                                         $_SESSION['caldasBD_16'] = $opcoes_calda_bd_16;
                                         foreach ($_POST['caldas_16'] as $caldas_16) {
@@ -2615,7 +2615,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_16'])){
                                         $opcoes3_16 = $_POST['complementos_16'];
                                         $opcoes_comple_16 = implode("<br>", $opcoes3_16);
-                                        $opcoes_comple_bd_16 = implode("\n   ", $opcoes3_16);
+                                        $opcoes_comple_bd_16 = implode("\n    ", $opcoes3_16);
                                         $_SESSION['complementos_16'] = $opcoes_comple_16;
                                         $_SESSION['complementosBD_16'] = $opcoes_comple_bd_16;
                                         foreach ($_POST['complementos_16'] as $complementos_16) {
@@ -2742,7 +2742,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_17'])){
                                         $opcoes_17 = $_POST['frutas_17'];
                                         $opcoes_fruta_17 = implode("<br>", $opcoes_17);
-                                        $opcoes_fruta_bd_17 = implode("\n   ", $opcoes_17);
+                                        $opcoes_fruta_bd_17 = implode("\n    ", $opcoes_17);
                                         $_SESSION['frutasBD_17'] = $opcoes_fruta_bd_17;
                                         $_SESSION['frutas_17'] = $opcoes_fruta_17;
                                         
@@ -2757,7 +2757,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_17'])){
                                         $opcoes2_17 = $_POST['caldas_17'];
                                         $opcoes_calda_17 = implode("<br>", $opcoes2_17);
-                                        $opcoes_calda_bd_17 = implode("\n   ", $opcoes2_17);
+                                        $opcoes_calda_bd_17 = implode("\n    ", $opcoes2_17);
                                         $_SESSION['caldas_17'] = $opcoes_calda_17;
                                         $_SESSION['caldasBD_17'] = $opcoes_calda_bd_17;
                                         foreach ($_POST['caldas_17'] as $caldas_17) {
@@ -2771,7 +2771,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_17'])){
                                         $opcoes3_17 = $_POST['complementos_17'];
                                         $opcoes_comple_17 = implode("<br>", $opcoes3_17);
-                                        $opcoes_comple_bd_17 = implode("\n   ", $opcoes3_17);
+                                        $opcoes_comple_bd_17 = implode("\n    ", $opcoes3_17);
                                         $_SESSION['complementos_17'] = $opcoes_comple_17;
                                         $_SESSION['complementosBD_17'] = $opcoes_comple_bd_17;
                                         foreach ($_POST['complementos_17'] as $complementos_17) {
@@ -2898,7 +2898,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_18'])){
                                         $opcoes_18 = $_POST['frutas_18'];
                                         $opcoes_fruta_18 = implode("<br>", $opcoes_18);
-                                        $opcoes_fruta_bd_18 = implode("\n   ", $opcoes_18);
+                                        $opcoes_fruta_bd_18 = implode("\n    ", $opcoes_18);
                                         $_SESSION['frutasBD_18'] = $opcoes_fruta_bd_18;
                                         $_SESSION['frutas_18'] = $opcoes_fruta_18;
                                         
@@ -2913,7 +2913,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_18'])){
                                         $opcoes2_18 = $_POST['caldas_18'];
                                         $opcoes_calda_18 = implode("<br>", $opcoes2_18);
-                                        $opcoes_calda_bd_18 = implode("\n   ", $opcoes2_18);
+                                        $opcoes_calda_bd_18 = implode("\n    ", $opcoes2_18);
                                         $_SESSION['caldas_18'] = $opcoes_calda_18;
                                         $_SESSION['caldasBD_18'] = $opcoes_calda_bd_18;
                                         foreach ($_POST['caldas_18'] as $caldas_18) {
@@ -2927,7 +2927,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_18'])){
                                         $opcoes3_18 = $_POST['complementos_18'];
                                         $opcoes_comple_18 = implode("<br>", $opcoes3_18);
-                                        $opcoes_comple_bd_18 = implode("\n   ", $opcoes3_18);
+                                        $opcoes_comple_bd_18 = implode("\n    ", $opcoes3_18);
                                         $_SESSION['complementos_18'] = $opcoes_comple_18;
                                         $_SESSION['complementosBD_18'] = $opcoes_comple_bd_18;
                                         foreach ($_POST['complementos_18'] as $complementos_18) {
@@ -3054,7 +3054,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_19'])){
                                         $opcoes_19 = $_POST['frutas_19'];
                                         $opcoes_fruta_19 = implode("<br>", $opcoes_19);
-                                        $opcoes_fruta_bd_19 = implode("\n   ", $opcoes_19);
+                                        $opcoes_fruta_bd_19 = implode("\n    ", $opcoes_19);
                                         $_SESSION['frutasBD_19'] = $opcoes_fruta_bd_19;
                                         $_SESSION['frutas_19'] = $opcoes_fruta_19;
                                         
@@ -3069,7 +3069,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_19'])){
                                         $opcoes2_19 = $_POST['caldas_19'];
                                         $opcoes_calda_19 = implode("<br>", $opcoes2_19);
-                                        $opcoes_calda_bd_19 = implode("\n   ", $opcoes2_19);
+                                        $opcoes_calda_bd_19 = implode("\n    ", $opcoes2_19);
                                         $_SESSION['caldas_19'] = $opcoes_calda_19;
                                         $_SESSION['caldasBD_19'] = $opcoes_calda_bd_19;
                                         foreach ($_POST['caldas_19'] as $caldas_19) {
@@ -3083,7 +3083,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_19'])){
                                         $opcoes3_19 = $_POST['complementos_19'];
                                         $opcoes_comple_19 = implode("<br>", $opcoes3_19);
-                                        $opcoes_comple_bd_19 = implode("\n   ", $opcoes3_19);
+                                        $opcoes_comple_bd_19 = implode("\n    ", $opcoes3_19);
                                         $_SESSION['complementos_19'] = $opcoes_comple_19;
                                         $_SESSION['complementosBD_19'] = $opcoes_comple_bd_19;
                                         foreach ($_POST['complementos_19'] as $complementos_19) {
@@ -3210,7 +3210,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['frutas_20'])){
                                         $opcoes_20 = $_POST['frutas_20'];
                                         $opcoes_fruta_20 = implode("<br>", $opcoes_20);
-                                        $opcoes_fruta_bd_20 = implode("\n   ", $opcoes_20);
+                                        $opcoes_fruta_bd_20 = implode("\n    ", $opcoes_20);
                                         $_SESSION['frutasBD_20'] = $opcoes_fruta_bd_20;
                                         $_SESSION['frutas_20'] = $opcoes_fruta_20;
                                         
@@ -3225,7 +3225,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['caldas_20'])){
                                         $opcoes2_20 = $_POST['caldas_20'];
                                         $opcoes_calda_20 = implode("<br>", $opcoes2_20);
-                                        $opcoes_calda_bd_20 = implode("\n   ", $opcoes2_20);
+                                        $opcoes_calda_bd_20 = implode("\n    ", $opcoes2_20);
                                         $_SESSION['caldas_20'] = $opcoes_calda_20;
                                         $_SESSION['caldasBD_20'] = $opcoes_calda_bd_20;
                                         foreach ($_POST['caldas_20'] as $caldas_20) {
@@ -3239,7 +3239,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     if(isset($_POST['complementos_20'])){
                                         $opcoes3_20 = $_POST['complementos_20'];
                                         $opcoes_comple_20 = implode("<br>", $opcoes3_20);
-                                        $opcoes_comple_bd_20 = implode("\n   ", $opcoes3_20);
+                                        $opcoes_comple_bd_20 = implode("\n    ", $opcoes3_20);
                                         $_SESSION['complementos_20'] = $opcoes_comple_20;
                                         $_SESSION['complementosBD_20'] = $opcoes_comple_bd_20;
                                         foreach ($_POST['complementos_20'] as $complementos_20) {
@@ -3626,7 +3626,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             $_SESSION['valor_acai_19'] = $valor_acai_19;
                             $_SESSION['valor_acai_20'] = $valor_acai_20;
                                 
-                            $soma =  $valor_acai + $valor_acai_2 + $valor_acai_3 + $valor_acai_4 + $valor_acai_5 + $valor_acai_6 + $valor_acai_7 + $valor_acai_8 + $valor_acai_9 + $valor_acai_10 + $valor_acai_11 + $valor_acai_12 + $valor_acai_13 + $valor_acai_14 + $valor_acai_15 + $valor_acai_16 + $valor_acai_17 + $valor_acai_18 + $valor_acai_19 + $valor_acai_20 + $quant_frutas + $quant_frutas_2 + $quant_frutas_3 + $quant_frutas_4 + $quant_frutas_5 + $quant_frutas_6 + $quant_frutas_7 + $quant_frutas_8 + $quant_frutas_9 + $quant_frutas_10 + $quant_frutas_11 + $quant_frutas_12 + $quant_frutas_13 + $quant_frutas_14 + $quant_frutas_14 + $quant_frutas_16 + $quant_frutas_17 + $quant_frutas_18 + $quant_frutas_19 + $quant_frutas_20 + $quant_caldas + $quant_caldas_2 +  $quant_caldas_3 + $quant_caldas_4 + $quant_caldas_5 + $quant_caldas_6 + $quant_caldas_7 + $quant_caldas_8 + $quant_caldas_9 + $quant_caldas_10 + $quant_caldas_11 + $quant_caldas_12 + $quant_caldas_13 + $quant_caldas_14 + $quant_caldas_15 + $quant_caldas_16 + $quant_caldas_17 + $quant_caldas_18 + $quant_caldas_19 + $quant_caldas_20 + $quant_complementos + $quant_complementos_2 + $quant_complementos_3 + $quant_complementos_4 + $quant_complementos_5 + $quant_complementos_6 + $quant_complementos_7 + $quant_complementos_8 + $quant_complementos_9 + $quant_complementos_10 + $quant_complementos_11 + $quant_complementos_12 + $quant_complementos_13 + $quant_complementos_14 + $quant_complementos_15 + $quant_complementos_16 + $quant_complementos_17 + $quant_complementos_18 + $quant_complementos_19 + $quant_complementos_20 + $quant_sorvetes + $quant_sorvetes_2 + $quant_sorvetes_3 + $quant_sorvetes_4 + $quant_sorvetes_5 + $quant_sorvetes_6 + $quant_sorvetes_7 + $quant_sorvetes_8 + $quant_sorvetes_9 + $quant_sorvetes_10 + $quant_sorvetes_11 + $quant_sorvetes_12 + $quant_sorvetes_13 + $quant_sorvetes_14 + $quant_sorvetes_15 + $quant_sorvetes_16 + $quant_sorvetes_17 + $quant_sorvetes_18 + $quant_sorvetes_19 + $quant_sorvetes_20 + $frete;
+                            $soma =  $valor_acai + $valor_acai_2 + $valor_acai_3 + $valor_acai_4 + $valor_acai_5 + $valor_acai_6 + $valor_acai_7 + $valor_acai_8 + $valor_acai_9 + $valor_acai_10 + $valor_acai_11 + $valor_acai_12 + $valor_acai_13 + $valor_acai_14 + $valor_acai_15 + $valor_acai_16 + $valor_acai_17 + $valor_acai_18 + $valor_acai_19 + $valor_acai_20 + $quant_frutas + $quant_frutas_2 + $quant_frutas_3 + $quant_frutas_4 + $quant_frutas_5 + $quant_frutas_6 + $quant_frutas_7 + $quant_frutas_8 + $quant_frutas_9 + $quant_frutas_10 + $quant_frutas_11 + $quant_frutas_12 + $quant_frutas_13 + $quant_frutas_14 + $quant_frutas_14 + $quant_frutas_16 + $quant_frutas_17 + $quant_frutas_18 + $quant_frutas_19 + $quant_frutas_20 + $quant_caldas + $quant_caldas_2 +  $quant_caldas_3 + $quant_caldas_4 + $quant_caldas_5 + $quant_caldas_6 + $quant_caldas_7 + $quant_caldas_8 + $quant_caldas_9 + $quant_caldas_10 + $quant_caldas_11 + $quant_caldas_12 + $quant_caldas_13 + $quant_caldas_14 + $quant_caldas_15 + $quant_caldas_16 + $quant_caldas_17 + $quant_caldas_18 + $quant_caldas_19 + $quant_caldas_20 + $quant_complementos + $quant_complementos_2 + $quant_complementos_3 + $quant_complementos_4 + $quant_complementos_5 + $quant_complementos_6 + $quant_complementos_7 + $quant_complementos_8 + $quant_complementos_9 + $quant_complementos_10 + $quant_complementos_11 + $quant_complementos_12 + $quant_complementos_13 + $quant_complementos_14 + $quant_complementos_15 + $quant_complementos_16 + $quant_complementos_17 + $quant_complementos_18 + $quant_complementos_19 + $quant_complementos_20 + $quant_sorvetes + $quant_sorvetes_2 + $quant_sorvetes_3 + $quant_sorvetes_4 + $quant_sorvetes_5 + $quant_sorvetes_6 + $quant_sorvetes_7 + $quant_sorvetes_8 + $quant_sorvetes_9 + $quant_sorvetes_10 + $quant_sorvetes_11 + $quant_sorvetes_12 + $quant_sorvetes_13 + $quant_sorvetes_14 + $quant_sorvetes_15 + $quant_sorvetes_16 + $quant_sorvetes_17 + $quant_sorvetes_18 + $quant_sorvetes_19 + $quant_sorvetes_20 + $frete + 0.50;
                             $ped_1_db = $valor_acai + $quant_frutas + $quant_caldas + $quant_complementos + $quant_sorvetes + $frete;
                             $valor_total = number_format($soma, 2, '.', '');
                             $_SESSION['total'] = $valor_total;

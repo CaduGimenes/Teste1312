@@ -19,6 +19,7 @@
 
     $sub_total = floatval($_POST['valor_total']);
     
+    $tamanho_texto = 1;
     $troco = $_POST['valor_troco'];
     $sum_troco = number_format($troco, 2, '.', ' ');
     $sum_total = number_format($valor_total, 2, '.', ' ');
@@ -172,30 +173,30 @@
     ---------------------------
         Acai '$tamanho'\n";
 
-        $texto = "<e><b>     Imperio do Acai</b></e>
+    $texto = "<e><b>     Imperio do Acai</b></e>
 
-        Nome: $nome
-        Tel.: $tel/$cel
-        Endereco: $rua, $num
-        Bairro: $bairro
-        $ref
+    Nome: $nome
+    Tel.: $tel/$cel
+    End: $rua, $num
+    Bairro: $bairro
+    $ref
      
-        <b>PEDIDO</b>
+    <b>PEDIDO</b>
         
-        <b>Tamanho</b>
-        $tamanho
+    <b>Tamanho</b>
+    $tamanho
       
-        <b>Frutas</b>
-        $frutas
+    <b>Frutas</b>
+    $frutas
      
-        <b>Complementos</b>
-        $complementos
+    <b>Complementos</b>
+    $complementos
      
-        <b>Caldas</b>
-        $caldas
+    <b>Caldas</b>
+    $caldas
      
-        <b>Adicional</b>
-        $adicional
+    <b>Adicional</b>
+    $adicional
      
 
         ";
@@ -204,22 +205,22 @@
         $pedidos .= "   ---------------------------
         Acai '$tamanho_2'\n";
 
-        $texto .= "\n\n       <b>PEDIDO 2</b>
+    $texto .= "\n\n       <b>PEDIDO 2</b>
         
-        <b>Tamanho</b>
-        $tamanho_2
+    <b>Tamanho</b>
+    $tamanho_2
           
-        <b>Frutas</b>
-        $frutas_2
+    <b>Frutas</b>
+    $frutas_2
          
-        <b>Complementos</b>
-        $complementos_2
+    <b>Complementos</b>
+    $complementos_2
          
-        <b>Caldas</b>
-        $caldas_2
+    <b>Caldas</b>
+    $caldas_2
          
-        <b>Adicional</b>
-        $adicional_2
+    <b>Adicional</b>
+    $adicional_2
             
         ";
         }
@@ -227,22 +228,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_3'\n";
 
-            $texto .= "\n\n<b>PEDIDO 3</b>
+    $texto .= "\n\n<b>PEDIDO 3</b>
         
-            <b>Tamanho</b>
-            $tamanho_3
+    <b>Tamanho</b>
+    $tamanho_3
           
-            <b>Frutas</b>
-            $frutas_3
+    <b>Frutas</b>
+    $frutas_3
+        
+    <b>Complementos</b>
+    $complementos_3
          
-            <b>Complementos</b>
-            $complementos_3
+    <b>Caldas</b>
+    $caldas_3
          
-            <b>Caldas</b>
-            $caldas_3
-         
-            <b>Adicional</b>
-            $adicional_3
+    <b>Adicional</b>
+    $adicional_3
             
             ";
         }
@@ -250,22 +251,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_4'\n";
 
-            $texto .= "\n\n<b>PEDIDO 4</b>
+    $texto .= "\n\n<b>PEDIDO 4</b>
         
-            <b>Tamanho</b>
-            $tamanho_4
+    <b>Tamanho</b>
+    $tamanho_4
           
-            <b>Frutas</b>
-            $frutas_4
+    <b>Frutas</b>
+    $frutas_4
          
-            <b>Complementos</b>
-            $complementos_4
+    <b>Complementos</b>
+    $complementos_4
          
-            <b>Caldas</b>
-            $caldas_4
+    <b>Caldas</b>
+    $caldas_4
          
-            <b>Adicional</b>
-            $adicional_4
+    <b>Adicional</b>
+    $adicional_4
             
             ";
         }
@@ -273,22 +274,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_5'\n";
 
-            $texto .= "\n\n<b>PEDIDO 5</b>
+    $texto .= "\n\n<b>PEDIDO 5</b>
         
-            <b>Tamanho</b>
-            $tamanho_5
+    <b>Tamanho</b>
+    $tamanho_5
           
-            <b>Frutas</b>
-            $frutas_5
+    <b>Frutas</b>
+    $frutas_5
          
-            <b>Complementos</b>
-            $complementos_5
+    <b>Complementos</b>
+    $complementos_5
          
-            <b>Caldas</b>
-            $caldas_5
+    <b>Caldas</b>
+    $caldas_5
          
-            <b>Adicional</b>
-            $adicional_5
+    <b>Adicional</b>
+    $adicional_5
             
             ";
         }
@@ -296,22 +297,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_6'\n";
 
-            $texto .= "\n\n<b>PEDIDO 6</b>
+    $texto .= "\n\n<b>PEDIDO 6</b>
         
-            <b>Tamanho</b>
-            $tamanho_6
+    <b>Tamanho</b>
+    $tamanho_6
           
-            <b>Frutas</b>
-            $frutas_6
+    <b>Frutas</b>
+    $frutas_6
          
-            <b>Complementos</b>
-            $complementos_6
+    <b>Complementos</b>
+    $complementos_6
          
-            <b>Caldas</b>
-            $caldas_6
+    <b>Caldas</b>
+    $caldas_6
          
-            <b>Adicional</b>
-            $adicional_6
+    <b>Adicional</b>
+    $adicional_6
             
             ";
         }
@@ -319,22 +320,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_7'\n";
 
-            $texto .= "\n\n<b>PEDIDO 7</b>
+    $texto .= "\n\n<b>PEDIDO 7</b>
         
-            <b>Tamanho</b>
-            $tamanho_7
+    <b>Tamanho</b>
+    $tamanho_7
           
-            <b>Frutas</b>
-            $frutas_7
+    <b>Frutas</b>
+    $frutas_7
          
-            <b>Complementos</b>
-            $complementos_7
+    <b>Complementos</b>
+    $complementos_7
          
-            <b>Caldas</b>
-            $caldas_7
+    <b>Caldas</b>
+    $caldas_7
          
-            <b>Adicional</b>
-            $adicional_7
+    <b>Adicional</b>
+    $adicional_7
             
             ";
         }
@@ -342,22 +343,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_8'\n";
 
-            $texto .= "\n\n<b>PEDIDO 8</b>
+    $texto .= "\n\n<b>PEDIDO 8</b>
         
-            <b>Tamanho</b>
-            $tamanho_8
+    <b>Tamanho</b>
+    $tamanho_8
           
-            <b>Frutas</b>
-            $frutas_8
+    <b>Frutas</b>
+    $frutas_8
          
-            <b>Complementos</b>
-            $complementos_8
+    <b>Complementos</b>
+    $complementos_8
          
-            <b>Caldas</b>
-            $caldas_8
+    <b>Caldas</b>
+    $caldas_8
          
-            <b>Adicional</b>
-            $adicional_8
+    <b>Adicional</b>
+    $adicional_8
             
             ";
         }
@@ -365,22 +366,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_9'\n";
 
-            $texto .= "\n\n<b>PEDIDO 9</b>
+    $texto .= "\n\n<b>PEDIDO 9</b>
         
-            <b>Tamanho</b>
-            $tamanho_9
+    <b>Tamanho</b>
+    $tamanho_9
           
-            <b>Frutas</b>
-            $frutas_9
+    <b>Frutas</b>
+    $frutas_9
          
-            <b>Complementos</b>
-            $complementos_9
+    <b>Complementos</b>
+    $complementos_9
          
-            <b>Caldas</b>
-            $caldas_9
+    <b>Caldas</b>
+    $caldas_9
          
-            <b>Adicional</b>
-            $adicional_9
+    <b>Adicional</b>
+    $adicional_9
             
             ";
         }
@@ -388,22 +389,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_10'\n";
 
-            $texto .= "\n\n<b>PEDIDO 10</b>
+    $texto .= "\n\n<b>PEDIDO 10</b>
         
-            <b>Tamanho</b>
-            $tamanho_10
+    <b>Tamanho</b>
+    $tamanho_10
           
-            <b>Frutas</b>
-            $frutas_10
+    <b>Frutas</b>
+    $frutas_10
          
-            <b>Complementos</b>
-            $complementos_10
+    <b>Complementos</b>
+    $complementos_10
          
-            <b>Caldas</b>
-            $caldas_10
+    <b>Caldas</b>
+    $caldas_10
          
-            <b>Adicional</b>
-            $adicional_10
+    <b>Adicional</b>
+    $adicional_10
             
             ";
         }
@@ -411,22 +412,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_11'\n";
 
-            $texto .= "\n\n<b>PEDIDO 11</b>
+    $texto .= "\n\n<b>PEDIDO 11</b>
         
-            <b>Tamanho</b>
-            $tamanho_11
+    <b>Tamanho</b>
+    $tamanho_11
           
-            <b>Frutas</b>
-            $frutas_11
+    <b>Frutas</b>
+    $frutas_11
          
-            <b>Complementos</b>
-            $complementos_11
+    <b>Complementos</b>
+    $complementos_11
          
-            <b>Caldas</b>
-            $caldas_11
+    <b>Caldas</b>
+    $caldas_11
          
-            <b>Adicional</b>
-            $adicional_11
+    <b>Adicional</b>
+    $adicional_11
             
             ";
         }
@@ -434,22 +435,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_12'\n";
 
-            $texto .= "\n\n<b>PEDIDO 12</b>
+    $texto .= "\n\n<b>PEDIDO 12</b>
         
-            <b>Tamanho</b>
-            $tamanho_12
+    <b>Tamanho</b>
+    $tamanho_12
           
-            <b>Frutas</b>
-            $frutas_12
+    <b>Frutas</b>
+    $frutas_12
          
-            <b>Complementos</b>
-            $complementos_12
+    <b>Complementos</b>
+    $complementos_12
          
-            <b>Caldas</b>
-            $caldas_12
+    <b>Caldas</b>
+    $caldas_12
          
-            <b>Adicional</b>
-            $adicional_12
+    <b>Adicional</b>
+    $adicional_12
             
             ";
         }
@@ -457,22 +458,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_13'\n";
 
-            $texto .= "\n\n<b>PEDIDO 13</b>
+    $texto .= "\n\n<b>PEDIDO 13</b>
         
-            <b>Tamanho</b>
-            $tamanho_13
+    <b>Tamanho</b>
+    $tamanho_13
           
-            <b>Frutas</b>
-            $frutas_13
+    <b>Frutas</b>
+    $frutas_13
          
-            <b>Complementos</b>
-            $complementos_13
+    <b>Complementos</b>
+    $complementos_13
          
-            <b>Caldas</b>
-            $caldas_13
+    <b>Caldas</b>
+    $caldas_13
          
-            <b>Adicional</b>
-            $adicional_13
+    <b>Adicional</b>
+    $adicional_13
             
             ";
         }
@@ -480,22 +481,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_14'\n";
 
-            $texto .= "\n\n<b>PEDIDO 14</b>
+    $texto .= "\n\n<b>PEDIDO 14</b>
         
-            <b>Tamanho</b>
-            $tamanho_14
+    <b>Tamanho</b>
+    $tamanho_14
           
-            <b>Frutas</b>
-            $frutas_14
+    <b>Frutas</b>
+    $frutas_14
          
-            <b>Complementos</b>
-            $complementos_14
+    <b>Complementos</b>
+    $complementos_14
          
-            <b>Caldas</b>
-            $caldas_14
+    <b>Caldas</b>
+    $caldas_14
          
-            <b>Adicional</b>
-            $adicional_14
+    <b>Adicional</b>
+    $adicional_14
             
             ";
         }
@@ -503,22 +504,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_15'\n";
 
-            $texto .= "\n\n<b>PEDIDO 15</b>
+    $texto .= "\n\n<b>PEDIDO 15</b>
         
-            <b>Tamanho</b>
-            $tamanho_15
+    <b>Tamanho</b>
+    $tamanho_15
           
-            <b>Frutas</b>
-            $frutas_15
+    <b>Frutas</b>
+    $frutas_15
          
-            <b>Complementos</b>
-            $complementos_15
+    <b>Complementos</b>
+    $complementos_15
          
-            <b>Caldas</b>
-            $caldas_15
+    <b>Caldas</b>
+    $caldas_15
          
-            <b>Adicional</b>
-            $adicional_15
+   <b>Adicional</b>
+    $adicional_15
             
             ";
         }
@@ -526,22 +527,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_16'\n";
 
-            $texto .= "\n\n<b>PEDIDO 16</b>
+    $texto .= "\n\n<b>PEDIDO 16</b>
         
-            <b>Tamanho</b>
-            $tamanho_16
+    <b>Tamanho</b>
+    $tamanho_16
           
-            <b>Frutas</b>
-            $frutas_16
+    <b>Frutas</b>
+    $frutas_16
          
-            <b>Complementos</b>
-            $complementos_16
+    <b>Complementos</b>
+    $complementos_16
          
-            <b>Caldas</b>
-            $caldas_16
+    <b>Caldas</b>
+    $caldas_16
          
-            <b>Adicional</b>
-            $adicional_16
+    <b>Adicional</b>
+    $adicional_16
             
             ";
         }
@@ -549,22 +550,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_17'\n";
 
-            $texto .= "\n\n<b>PEDIDO 17</b>
+    $texto .= "\n\n<b>PEDIDO 17</b>
         
-            <b>Tamanho</b>
-            $tamanho_17
+    <b>Tamanho</b>
+    $tamanho_17
           
-            <b>Frutas</b>
-            $frutas_17
+    <b>Frutas</b>
+    $frutas_17
          
-            <b>Complementos</b>
-            $complementos_17
+    <b>Complementos</b>
+    $complementos_17
          
-            <b>Caldas</b>
-            $caldas_17
+    <b>Caldas</b>
+    $caldas_17
          
-            <b>Adicional</b>
-            $adicional_17
+    <b>Adicional</b>
+    $adicional_17
             
             ";
         }
@@ -572,45 +573,45 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_18'\n";
 
-            $texto .= "\n\n<b>PEDIDO 18</b>
+    $texto .= "\n\n<b>PEDIDO 18</b>
         
-            <b>Tamanho</b>
-            $tamanho_18
+    <b>Tamanho</b>
+    $tamanho_18
           
-            <b>Frutas</b>
-            $frutas_18
+    <b>Frutas</b>
+    $frutas_18
          
-            <b>Complementos</b>
-            $complementos_18
+    <b>Complementos</b>
+    $complementos_18
          
-            <b>Caldas</b>
-            $caldas_18
+    <b>Caldas</b>
+    $caldas_18
          
-            <b>Adicional</b>
-            $adicional_18
+    <b>Adicional</b>
+    $adicional_18
             
             ";
         }
         if($_SESSION['pedido_19'] == 1){
             $pedidos .= "   ---------------------------
-            Acai '$tamanho_19'\n";
+                Acai '$tamanho_19'\n";
 
-            $texto .= "\n\n<b>PEDIDO 19</b>
+    $texto .= "\n\n<b>PEDIDO 19</b>
         
-            <b>Tamanho</b>
-            $tamanho_19
+    <b>Tamanho</b>
+    $tamanho_19
           
-            <b>Frutas</b>
-            $frutas_19
+    <b>Frutas</b>
+    $frutas_19
          
-            <b>Complementos</b>
-            $complementos_19
+    <b>Complementos</b>
+    $complementos_19
          
-            <b>Caldas</b>
-            $caldas_19
+    <b>Caldas</b>
+    $caldas_19
          
-            <b>Adicional</b>
-            $adicional_19
+    <b>Adicional</b>
+    $adicional_19
             
             ";
         }
@@ -618,22 +619,22 @@
             $pedidos .= "   ---------------------------
             Acai '$tamanho_20'\n";
 
-           $texto .= "\n\n<b>PEDIDO 20</b>
+    $texto .= "\n\n<b>PEDIDO 20</b>
         
-           <b>Tamanho</b>
-           $tamanho_20
+    <b>Tamanho</b>
+    $tamanho_20
          
-           <b>Frutas</b>
-           $frutas_20
+    <b>Frutas</b>
+    $frutas_20
         
-           <b>Complementos</b>
-           $complementos_20
+    <b>Complementos</b>
+    $complementos_20
         
-           <b>Caldas</b>
-           $caldas_20
+    <b>Caldas</b>
+    $caldas_20
         
-           <b>Adicional</b>
-           $adicional_20
+    <b>Adicional</b>
+    $adicional_20
            
            "; 
         }

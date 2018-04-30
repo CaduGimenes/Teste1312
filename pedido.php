@@ -258,7 +258,7 @@ include $_SERVER['DOCUMENT_ROOT']."/dist/includes/banco.php";
         $num =  mysqli_num_rows($get);
 
         if($num == 1){
-            echo '<script>location.href="escolha_pedido.php";</script>';
+            echo '<script>location.href="endereco.php";</script>';
         }else echo '<script>location.href="cadastro.php";</script>';
     }
 

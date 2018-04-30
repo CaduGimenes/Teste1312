@@ -10,11 +10,11 @@ if (isset($_GET["pesquisar"])) {
     $conexao = mysql_connect($server, $user, $senha) or die("Erro na conexão!");
     mysql_select_db($base);
     // Verifica se a variável está vazia
-    if (empty($nome)) {
-        $sql = "SELECT * FROM tb_clientes";
-    } else {
+    if (isset($nome)) {
         $nome .= "%";
         $sql = "SELECT * FROM tb_clientes WHERE nm_cliente like '$nome' or cd_tel like '$nome' or cd_cel like '$nome'";
+    }else {
+        $sql = "SELECT * FROM tb_clientes";
     }
     sleep(1);
     $result = mysql_query($sql);

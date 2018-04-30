@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Confirmar Pedido</title>
+        <title>Novo Endereço</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon" />
@@ -26,9 +26,7 @@
         </script>
     </head>
     <body>
-        <?php session_start(); 
-        error_reporting(0);
-        ini_set('display_errors', 0 );?>
+        <?php session_start() ?>
         <div class="main-wrapper">
             <div class="app" id="app">
                 <header class="header">
@@ -37,6 +35,7 @@
                             <i class="fa fa-bars"></i>
                         </button>
                     </div>
+
                     <div class="header-block header-block-nav">
                                 <ul class="nav-profile">
                                 <?php 
@@ -47,7 +46,7 @@
                                             </a>
                                             <div class='dropdown-menu profile-dropdown-menu' aria-labelledby='dropdownMenu1'>
                                             <a class='dropdown-item' href='alterar_senha.php'>
-                                                <i class='fa fa-unlock-alt icon'></i> Alterar Senha </a>    
+                                                <i class='fa fa-unlock-alt icon'></i> Alterar Senha </a>     
                                             <a class='dropdown-item' href='logout.php'>
                                                 <i class='fa fa-times-circle-o icon'></i> Sair </a>
                                                
@@ -76,11 +75,11 @@
                                     <span class="l l3"></span>
                                     <span class="l l4"></span>
                                     <span class="l l5"></span>
-                                </div> Império do Açaí </div>
+                                </div> Império do Açaí</div>
                         </div>
                         <nav class="menu">
                             <ul class="sidebar-menu metismenu" id="sidebar-menu">
-                            <?php 
+                                <?php 
 
                                         if(isset($_SESSION['admin'])){
 
@@ -218,133 +217,89 @@
                                 <div class="card sameheight-item">
                                     <div class="card-block">
                                         <div class="card-title-block">
-                                            <h3 class="title"> Confirmar Informações </h3>
+                                            <h3 class="title"> Novo Endereço </h3>
                                         </div>
-                                        <?php
-                                            include $_SERVER['DOCUMENT_ROOT']."/dist/includes/banco.php";
-                                            
-                                            $_SESSION['tel'];
-                                            $_SESSION['tamanho_acai'];
-                                            @$_SESSION['caldasBD'];
-                                            $_SESSION['complementosBD'];
-                                            $_SESSION['frutasBD'];
-                                           
-                                            $get = mysqli_query($link,"SELECT * FROM tb_clientes WHERE cd_tel =".$_SESSION['tel']." OR cd_cel =".$_SESSION['tel']."");
-                                            while($row = mysqli_fetch_assoc($get)){
-                                                
-                                        ?>
                                         <section class="section">
-                                            <form action="impressao.php" method="POST">
+                                            <form action="" method="POST">
                                                     <div class="row">
-                                                        <div class="col-6 col-md-6">
-                                                            
-                                                                <div class="form-group">
-                                                                    <label class="control-label">Nome</label>
-                                                                    <input type="text" id="nome" name="nome" readonly="readonly" class="form-control boxed" value="<?php echo $row['nm_cliente']; ?> " > </div>
-                                                                
-                                                            
-                                                        </div>
                                                         
-                                                        <div class="col-6 col-md-3">
-                                                                
-                                                                    <div class="form-group">
-                                                                        <label class="control-label">Telefone</label>
-                                                                        <input type="text" id="tel" name="tel" readonly="readonly" class="form-control boxed" value="<?php if($row['cd_tel'] == 0){ echo "";}else{echo $row['cd_tel'];}  ?> "> </div>
-                                                                
-                                                            </div>
-                                                        
-                                                            <div class="col-6 col-md-3">
-                                                                    
-                                                                        <div class="form-group">
-                                                                            <label class="control-label">Celular</label>
-                                                                            <input type="text" id="cel" name="cel" readonly="readonly" class="form-control boxed" value="<?php if($row['cd_cel'] == 0){ echo "";}else{echo $row['cd_cel'];} ?>" > </div>
-                                                                    
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                            <br><h3 class="title"> Endereço</h3><br>
-                                                        </div>
                                                         <div class="col-6 col-md-5">
-                                                                
-                                                                    <div class="form-group">
-                                                                        <label class="control-label">Rua</label>
-                                                                        <input type="text" id="rua" name="rua" readonly="readonly" class="form-control boxed" value="<?php echo $row['nm_rua']; ?> "  > </div>
-                                                                
-                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Rua<font color="red">*</font></label>
+                                                                <input type="text" id="rua" name="rua" class="form-control underlined" placeholder="Rua" required> </div>
+                                                        </div>
                                                             <div class="col-6 col-md-5">
-                                                                    
                                                                         <div class="form-group">
-                                                                            <label class="control-label">Bairro</label>
-                                                                            <input type="text" id="bairro" name="bairro" readonly="readonly" class="form-control boxed" value="<?php echo $row['nm_bairro']; ?>" > </div>
-                                                                    
+                                                                            <label class="control-label">Bairro<font color="red">*</font></label>
+                                                                            <select required class="form-control" name="bairro" id="bairro">
+                                                                           <option>&nbsp;-- Selecionar --&nbsp;&nbsp;&nbsp;</option>
+                                                                           <option value="Alemoa">Alemoa</option>
+                                                                           <option value="Biquinha">Biquinha</option>
+                                                                           <option value="Boa Vista">Boa Vista</option>
+                                                                           <option value="Bom Retiro">Bom Retiro</option>
+                                                                           <option value="Campo Grande">Campo Grande</option>
+                                                                           <option value="Caneleira">Caneleira</option>
+                                                                           <option value="Canal 1">Canal 1</option>
+                                                                           <option value="Canal 2">Canal 2</option>
+                                                                           <option value="Canal 3">Canal 3</option>
+                                                                           <option value="Canal 4">Canal 4</option>
+                                                                           <option value="Canal 5">Canal 5</option>
+                                                                           <option value="Cascatinha">Cascatinha</option>
+                                                                           <option value="Catarina">Catarina</option>
+                                                                           <option value="Caxeta">Caxeta</option>
+                                                                           <option value="Centro Santos">Centro Santos</option>
+                                                                           <option value="Centro São Vicente">Centro São Vicente</option>
+                                                                           <option value="Cidade Nautica">Cidade Nautica</option>
+                                                                           <option value="Conselheiro Nébias">Conselheiro Nébias</option>
+                                                                           <option value="Divisa Praia">Divisa Praia</option>
+                                                                           <option value="Divisa Tambores">Divisa Tambores</option>
+                                                                           <option value="Esplanada">Esplanada</option>
+                                                                           <option value="Fatima">Fatima</option>
+                                                                           <option value="Gonzaga">Gonzaga</option>
+                                                                           <option value="Gonzaguinha">Gonzaguinha</option>
+                                                                           <option value="Ilha Porchat">Ilha Porchat</option>
+                                                                           <option value="Ilheu">Ilheu</option>
+                                                                           <option value="Itaraté">Itaraté</option>
+                                                                           <option value="Jardim Guassu">Jardim Guassu</option>
+                                                                           <option value="Jardim Independencia">Jardim Independencia</option>
+                                                                           <option value="Jockey Clube">Jockey Clube</option>
+                                                                           <option value="José Menino">José Menino</option>
+                                                                           <option value="Macuco">Macuco</option>
+                                                                           <option value="Marapé">Marapé</option>
+                                                                           <option value="Morros">Morros</option>
+                                                                           <option value="Nautica 3">Nautica 3</option>
+                                                                           <option value="Nossa Sra. de Fatima">Nossa Sra. de Fatima</option>
+                                                                           <option value="Nova Cintra">Nova Cintra</option>
+                                                                           <option value="Parque Bitaru">Parque Bitaru</option>
+                                                                           <option value="Parque São Vicente">Parque São Vicente</option>
+                                                                           <option value="Prainha">Prainha</option>
+                                                                           <option value="Saboó">Saboó</option>
+                                                                           <option value="Sambaiatuba">Sambaiatuba</option>
+                                                                           <option value="São Manoel">São Manoel</option>
+                                                                           <option value="Tancredo">Tancreto</option>
+                                                                           <option value="Vila Belmiro">Vila Belmiro</option>
+                                                                           <option value="Vila Margarida">Vila Margarida</option>
+                                                                           <option value="Vila Matias">Vila Matias</option>
+                                                                           <option value="Vila Melo">Vila Melo</option>
+                                                                           <option value="Vila São Jorge Santos">Vila São Jorge Santos </option>
+                                                                           <option value="Vila São Jorge SV">Vila São Jorge SV</option>
+                                                                           <option value="Votorua">Votorua</option>
+                                                                           <option value="Zona Noroeste">Zona Noroeste</option>
+                                                                       </select>
+                                                                        </div>
                                                                 </div>
                                                                 <div class="col-6 col-md-5">
-                                                                       
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Referência</label>
-                                                                                <input type="text" id="ref" name="ref" readonly="readonly" class="form-control boxed" value="<?php echo $row['nm_ref']; ?> " > </div>
-                                                                        
+                                                                        <div class="form-group">
+                                                                        <label class="control-label">Referência</label>
+                                                                        <input type="text" id="ref" name="ref" class="form-control underlined" placeholder="Referência"> </div>
                                                                     </div>
                                                                     <div class="col-6 col-md-3">
-                                                                            
                                                                                 <div class="form-group">
-                                                                                    <label class="control-label">Número</label>
-                                                                                    <input type="text" id="num_casa" name="num_casa" readonly="readonly" class="form-control boxed"  value=" <?php echo $row['cd_casa'];} ?>" > </div>
-                                                                            
+                                                                                    <label class="control-label">Número<font color="red">*</font></label>
+                                                                                    <input type="text" id="casa" name="casa" class="form-control underlined" placeholder="Número" required> </div>
                                                                         </div>
                                                                         <div class="col-6 col-sm-3">
         
-                                                        </div>
-                                                        <div class="col-md-12">
-                                                            <br><h3 class="title"> Pedido</h3><br>
-                                                        </div>
-                                                        
-                                                        <div class="col-6 col-md-4">
-                                                                <br><label class="control-label"><u><font color="purple">Frutas</font></u></label><br>
-                                                                <?php if(isset($_SESSION['frutas'])){echo $_SESSION['frutas'];}?>
-                                                            </div>
-                                                        <div class="col-6 col-md-4">
-                                                                <br><label class="control-label"><u><font color="purple">Caldas</font></u></label><br>
-                                                                <?php if(isset($_SESSION['caldas'])){echo $_SESSION['caldas']."<br />";} ?>
-                                                        </div>
-                                                        <div class="col-6 col-md-4">
-                                                                <br><label class="control-label"><u><font color="purple">Complementos</font></u></label><br>
-                                                                <?php if(isset($_SESSION['complementos'])){echo $_SESSION['complementos']."<br />";} ?>
-                                                        </div>
-                                                        <div class="col-6 col-md-4">
-                                                                <br><label class="control-label"><u><font color="purple">Sorvetes</font></u></label><br>
-                                                                <?php if(isset($_SESSION['sorvete'])){echo $_SESSION['sorvete'];} ?>
-                                                        </div>
-                                                        <div class="col-6 col-md-4">
-                                                        
-                                                        </div>
-                                                        <div class="col-6 col-md-4">
-                                                        
-                                                        </div>
-                                                        <div class="col-6 col-md-4">
-                                                        
-                                                        </div>
-                                                        <div class="col-6 col-md-4">
-                                                        <div class="form-group">
-                                                                        <label class="control-label">Valor Pago: </label>
-                                                                        <input type="text" id="valor_troco" name="valor_troco" class="form-control boxed"> </div>
-                                                                        <p style="font-size:12px;">Adicionar <b>.</b> para centavos&nbsp; <b>Ex:</b> 17.50</p>
-                                                        </div>
-                                                        <div class="col-6 col-md-4">
-                                                                <div class="form-group">
-                                                                        <label class="control-label">Total:</label>
-                                                                        <input type="text" id="valor_total" name="valor_total" readonly="readonly" class="form-control boxed"  value="<?php echo number_format($_SESSION['total'], 2, ',', '.'); ?>" > </div>
-                                                        </div>
-                                                        <div class="col-6 col-md-4">
-                                                        
-                                                        </div>
-                                                        <div class="col-6 col-md-4">
-                                                            <label>
-                                                                <input name="debito" class="checkbox" type="checkbox" value="debito">
-                                                                <span>Débito</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="col-6 col-md-4">
-                                                        
                                                         </div>
                                                         <div class="col-6 col-md-3">
                                                                 <section class="section">
@@ -362,13 +317,15 @@
                                                             </div>
                                                             <div class="col-6 col-md-1">
                                                                     <section class="section">
-                                                                        <br><button type="submit" value="submit" class="btn btn-primary-outline">Confirmar</button>
+                                                                        <br><button type="submit" value="submit" name="enviar" class="btn btn-primary-outline">Avançar</button>
                                                                     </section>
                                                                 </div>
 
                                             </form>
                 
-                                                        
+                                                        <div class="col-6 col-md-4">
+                                                            <br><p>Campos com <font color="red">*</font> são obrigatórios...</p>
+                                                        </div>
                                                         </div>
 
 
@@ -379,6 +336,35 @@
                                 </div>
                             </div>
                         </div>
+                        <?php 
+
+
+                            include $_SERVER['DOCUMENT_ROOT']."/dist/includes/banco.php";
+
+                            if(isset($_POST['rua'],$_POST['bairro'],$_POST['casa'])){
+                           
+                            $rua =  $_POST['rua'];
+                            $bairro = $_POST['bairro'];
+                            $ref = $_POST['ref'];
+                            $casa =  $_POST['casa'];
+
+                            $_SESSION['tel'];
+
+                            $tel = $_SESSION['tel'];
+                            
+                            if($_POST['enviar']){
+                                $get = mysqli_query($link, "UPDATE tb_clientes SET nm_rua = '$rua', nm_bairro = '$bairro', nm_ref = '$ref', cd_casa = '$casa' WHERE cd_cel = '$tel' OR cd_tel = '$tel'");
+                                echo "<script>alert('Endereço atualizado com Sucesso!');location.href='escolha_pedido.php';</script>";
+                            }
+
+                                                        
+                            }
+                        
+                            
+                            mysqli_close($link);
+                            
+                        
+                        ?>
                     </section>
                 </article>
                 <footer class="footer">
@@ -409,17 +395,13 @@
             </div>
         </div>
         <script type="text/javascript">
-             $(function() {
-            $('#valor_troco').maskMoney();
-            })
-
             function Voltar()
             {
-                location.href="escolha_pedido.php";
+                location.href="endereco.php";
             }
 
+            
         </script>
-        
         <script src="js/vendor.js"></script>
         <script src="js/app.js"></script>
     </body>

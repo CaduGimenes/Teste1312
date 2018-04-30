@@ -73,10 +73,16 @@
 
                     $_SESSION['admin'] = $usuario;
 
-                    $query = mysqli_query($link,"SELECT nm_adm,cd_senha FROM tb_admin WHERE nm_adm = '$usuario' AND cd_senha = '$senha'");
+                    $query = mysqli_query($link,"SELECT * FROM tb_admin WHERE nm_adm = '$usuario' AND cd_senha = '$senha'");
 
-                    if($query == 1){
+                    $verifica_login = mysqli_num_rows($query);
+
+                    if($verifica_login == 1){
+
                         header("Location:index.php");
+
+                    }else{
+                        echo "<script>alert('Usuario ou Senha incorretos!')</script>";
                     }
                 }
 
