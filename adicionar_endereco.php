@@ -361,8 +361,9 @@
                     if($verifica != 0){
                         echo "<script>alert('Bairro já cadastrado, Por favor cadastre outro ou altere o mesmo!')</script>";
                     }else{
-                        $insere = mysqli_query($link,"INSERT INTO tb_endereco(nm_bairro,vl_taxa) VALUES('$bairro_add',$taxa)");
                         echo "<script>Cadastrado com Sucesso!</script>";
+                        $insere = mysqli_query($link,"INSERT INTO tb_endereco(nm_bairro,vl_taxa) VALUES('$bairro_add',$taxa)");
+                        
                     }
 
                 }

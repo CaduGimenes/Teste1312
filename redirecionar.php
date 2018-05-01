@@ -303,6 +303,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             }
 
+                            $vezes = 1;
                             //Verificando se existe um segundo pedido
                             if($valor_acai_2 != 0){
                                 $_SESSION['quant_pedidos'] = 2;
@@ -453,7 +454,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             }
                             $ped_2_db = $valor_acai_2 + $quant_frutas_2 + $quant_caldas_2 + $quant_complementos_2 + $quant_sorvetes_2;
-
+                            $vezes = 2;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_2_db','$print_sub','$dataEUA','$hora','$valor_acai_2')");
 
@@ -610,7 +611,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_3_db = $valor_acai_3 + $quant_frutas_3 + $quant_caldas_3 + $quant_complementos_3 + $quant_sorvetes_3;
-
+                            $vezes = 3;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_3_db','$print_sub','$dataEUA','$hora','$valor_acai_3')");
 
@@ -766,7 +767,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_4_db = $valor_acai_4 + $quant_frutas_4 + $quant_caldas_4 + $quant_complementos_4 + $quant_sorvetes_4;
-
+                            $vezes = 4;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_4_db','$print_sub','$dataEUA','$hora','$valor_acai_4')");
 
@@ -923,7 +924,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_5_db = $valor_acai_5 + $quant_frutas_5 + $quant_caldas_5 + $quant_complementos_5 + $quant_sorvetes_5;
-
+                            $vezes = 5;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_5_db','$print_sub','$dataEUA','$hora','$valor_acai_5')");
 
@@ -1079,7 +1080,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_6_db = $valor_acai_6 + $quant_frutas_6 + $quant_caldas_6 + $quant_complementos_6 + $quant_sorvetes_6;
-
+                            $vezes = 6;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_6_db','$print_sub','$dataEUA','$hora','$valor_acai_6')");
 
@@ -1235,7 +1236,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_7_db = $valor_acai_7 + $quant_frutas_7 + $quant_caldas_7 + $quant_complementos_7 + $quant_sorvetes_7;
-
+                            $vezes = 7;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_7_db','$print_sub','$dataEUA','$hora','$valor_acai_7')");
 
@@ -1391,7 +1392,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_8_db = $valor_acai_8 + $quant_frutas_8 + $quant_caldas_8 + $quant_complementos_8 + $quant_sorvetes_8;
-
+                            $vezes = 8;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_8_db','$print_sub','$dataEUA','$hora','$valor_acai_8')");
 
@@ -1547,7 +1548,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_9_db = $valor_acai_9 + $quant_frutas_9 + $quant_caldas_9 + $quant_complementos_9 + $quant_sorvetes_9;
-
+                            $vezes = 9;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_9_db','$print_sub','$dataEUA','$hora','$valor_acai_9')");
 
@@ -1703,7 +1704,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_10_db = $valor_acai_10 + $quant_frutas_10 + $quant_caldas_10 + $quant_complementos_10 + $quant_sorvetes_10;
-
+                            $vezes = 10;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_10_db','$print_sub','$dataEUA','$hora','$valor_acai_10')");
 
@@ -1859,7 +1860,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_11_db = $valor_acai_11 + $quant_frutas_11 + $quant_caldas_11 + $quant_complementos_11 + $quant_sorvetes_11;
-
+                            $vezes = 11;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_11_db','$print_sub','$dataEUA','$hora','$valor_acai_11')");
 
@@ -2015,7 +2016,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_12_db = $valor_acai_12 + $quant_frutas_12 + $quant_caldas_12 + $quant_complementos_12 + $quant_sorvetes_12;
-
+                            $vezes = 12;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_12_db','$print_sub','$dataEUA','$hora','$valor_acai_12')");
 
@@ -2171,7 +2172,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_13_db = $valor_acai_13 + $quant_frutas_13 + $quant_caldas_13 + $quant_complementos_13 + $quant_sorvetes_13;
-
+                            $vezes = 13;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_13_db','$print_sub','$dataEUA','$hora','$valor_acai_13')");
 
@@ -2327,7 +2328,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_14_db = $valor_acai_14 + $quant_frutas_14 + $quant_caldas_14 + $quant_complementos_14 + $quant_sorvetes_14;
-
+                            $vezes = 14;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_14_db','$print_sub','$dataEUA','$hora','$valor_acai_14')");
 
@@ -2483,7 +2484,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_15_db = $valor_acai_15 + $quant_frutas_15 + $quant_caldas_15 + $quant_complementos_15 + $quant_sorvetes_15;
-
+                            $vezes = 15;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_15_db','$print_sub','$dataEUA','$hora','$valor_acai_15')");
 
@@ -2639,7 +2640,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_16_db = $valor_acai_16 + $quant_frutas_16 + $quant_caldas_16 + $quant_complementos_16 + $quant_sorvetes_16;
-
+                            $vezes = 16;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_16_db','$print_sub','$dataEUA','$hora','$valor_acai_16')");
 
@@ -2795,7 +2796,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_17_db = $valor_acai_17 + $quant_frutas_17 + $quant_caldas_17 + $quant_complementos_17 + $quant_sorvetes_17;
-
+                            $vezes = 17;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,vl_acai) VALUES('$ped_17_db','$print_sub','$dataEUA','$hora','$valor_acai_17')");
 
@@ -2951,7 +2952,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_18_db = $valor_acai_18 + $quant_frutas_18 + $quant_caldas_18 + $quant_complementos_18 + $quant_sorvetes_18;
-
+                            $vezes = 18;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_18_db','$print_sub','$dataEUA','$hora','$valor_acai_18')");
 
@@ -3107,7 +3108,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_19_db = $valor_acai_19 + $quant_frutas_19 + $quant_caldas_19 + $quant_complementos_19 + $quant_sorvetes_19;
-
+                            $vezes = 19;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_19_db','$print_sub','$dataEUA','$hora','$valor_acai_19')");
 
@@ -3263,7 +3264,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             }
 
                             $ped_20_db = $valor_acai_20 + $quant_frutas_20 + $quant_caldas_20 + $quant_complementos_20 + $quant_sorvetes_20;
-
+                            $vezes = 20;
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_20_db','$print_sub','$dataEUA','$hora','$valor_acai_20')");
 
@@ -3382,224 +3383,15 @@ date_default_timezone_set('America/Sao_Paulo');
                             $_SESSION['tel'];
                             $tel = $_SESSION['tel'];
 
-                            $get = mysqli_query($link,"SELECT nm_bairro FROM tb_clientes WHERE cd_tel ='$tel' OR cd_cel ='$tel'");
-
-                            while($row = mysqli_fetch_assoc($get)){
-                                $taxa = $row['nm_bairro'];
-
-                                switch($taxa){
-                                    case 'Jardim Independencia':
-                                        $frete = 4.00;
-                                        break;
-    
-                                    case 'Caneleira':
-                                        $frete = 3.00;
-                                        break;
-                                    
-                                    case 'Sambaiatuba':
-                                        $frete = 3.00;
-                                        break;
-    
-                                    case 'Fatima':
-                                        $frete = 4.00;
-                                        break;
-    
-                                    case 'Bom Retiro':
-                                        $frete = 2.00;
-                                        break;
-    
-                                    case 'Parque Bitaru':
-                                        $frete = 5.00;
-                                        break;
-    
-                                    case 'Jockey Clube':
-                                        $frete = 3.00;
-                                        break;
-    
-                                    case 'Tancredo':
-                                        $frete = 5.00;
-                                        break;
-    
-                                    case 'Cidade Nautica':
-                                        $frete = 4.00;
-                                        break;
-    
-                                    case 'Nautica 3':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Nossa Sra. de Fatima':
-                                        $frete = 5.00;
-                                        break;
-    
-                                    case 'Morros':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Nova Cintra':
-                                        $frete = 5.00;
-                                        break;
-    
-                                    case 'Saboó':
-                                        $frete = 5.00;
-                                        break;
-    
-                                    case 'Macuco':
-                                        $frete = 9.00;
-                                        break;
-    
-                                    case 'Gonzaga':
-                                        $frete = 8.00;
-                                        break;
-    
-                                    case 'Vila Melo':
-                                        $frete = 4.00;
-                                        break;
-    
-                                    case 'Vila São Jorge SV':
-                                        $frete = 3.00;
-                                        break;
-    
-                                    case 'Vila São Jorge Santos':
-                                        $frete = 3.00;
-                                        break;
-    
-                                    case 'Jardim Guassu':
-                                        $frete = 3.00;
-                                        break;
-    
-                                    case 'Biquinha':
-                                        $frete = 5.00;
-                                        break;
-    
-                                    case 'Boa Vista':
-                                        $frete = 5.00;
-                                        break;
-    
-                                    case 'Ilha Porchat':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Alemoa':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'São Manoel':
-                                        $frete = 7.00;
-                                        break;
-    
-                                    case 'Conselheiro Nébias':
-                                        $frete = 7.00;
-                                        break;
-    
-                                    case 'Vila Margarida':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Vila Matias':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Campo Grande':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Esplanada':
-                                        $frete = 5.00;
-                                        break;
-    
-                                    case 'Centro Santos':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Gonzaguinha':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Itaraté':
-                                        $frete = 5.00;
-                                        break;
-    
-                                    case 'Divisa Praia':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Divisa Tambores':
-                                        $frete = 3.00;
-                                        break;
-    
-                                    case 'José Menino':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Votorua':
-                                        $frete = 4.00;
-                                        break;
-    
-                                    case 'Prainha':
-                                        $frete = 7.00;
-                                        break;
-    
-                                    case 'Marapé':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Centro São Vicente':
-                                        $frete = 5.00;
-                                        break;
-    
-                                    case 'Canal 4':
-                                        $frete = 9.00;
-                                        break;
-    
-                                    case 'Canal 5':
-                                        $frete = 9.00;
-                                        break;
-    
-                                    case 'Canal 3':
-                                        $frete = 8.00;
-                                        break;
-    
-                                    case 'Canal 1':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Canal 2':
-                                        $frete = 6.00;
-                                        break;
-                                    
-                                    case 'Caxeta':
-                                        $frete = 3.00;
-                                        break;
-    
-                                    case 'Catarina':
-                                        $frete = 3.00;
-                                        break;
-    
-                                    case 'Vila Belmiro':
-                                        $frete = 6.00;
-                                        break;
-    
-                                    case 'Ilheu':
-                                        $frete = 3.00;
-                                        break;
-    
-                                    case 'Zona Noroeste':
-                                        $frete = 2.00;
-                                        break;
-    
-                                    case 'Parque São Vicente':
-                                        $frete = 3.00;
-                                        break;
-    
-                                    case 'Cascatinha':
-                                        $frete = 4.00;
-                                        break;
-    
+                            $bairro = mysqli_query($link,"SELECT nm_bairro FROM tb_clientes WHERE cd_tel ='$tel' OR cd_cel ='$tel'");
+                            while($row = mysqli_fetch_assoc($bairro)){
+                                $bairro_proc = $row['nm_bairro'];
+                                $procura_bairro = mysqli_query($link,"SELECT vl_taxa FROM tb_endereco WHERE nm_bairro = '$bairro_proc'");
+                                while($row2 = mysqli_fetch_assoc($procura_bairro)){
+                                    $taxinha =  $row2['vl_taxa'];
+                                    $frete = $taxinha;
                                 }
-
-                                
-                                
+                            }
 
                             }
                             
@@ -3626,7 +3418,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             $_SESSION['valor_acai_19'] = $valor_acai_19;
                             $_SESSION['valor_acai_20'] = $valor_acai_20;
                                 
-                            $soma =  $valor_acai + $valor_acai_2 + $valor_acai_3 + $valor_acai_4 + $valor_acai_5 + $valor_acai_6 + $valor_acai_7 + $valor_acai_8 + $valor_acai_9 + $valor_acai_10 + $valor_acai_11 + $valor_acai_12 + $valor_acai_13 + $valor_acai_14 + $valor_acai_15 + $valor_acai_16 + $valor_acai_17 + $valor_acai_18 + $valor_acai_19 + $valor_acai_20 + $quant_frutas + $quant_frutas_2 + $quant_frutas_3 + $quant_frutas_4 + $quant_frutas_5 + $quant_frutas_6 + $quant_frutas_7 + $quant_frutas_8 + $quant_frutas_9 + $quant_frutas_10 + $quant_frutas_11 + $quant_frutas_12 + $quant_frutas_13 + $quant_frutas_14 + $quant_frutas_14 + $quant_frutas_16 + $quant_frutas_17 + $quant_frutas_18 + $quant_frutas_19 + $quant_frutas_20 + $quant_caldas + $quant_caldas_2 +  $quant_caldas_3 + $quant_caldas_4 + $quant_caldas_5 + $quant_caldas_6 + $quant_caldas_7 + $quant_caldas_8 + $quant_caldas_9 + $quant_caldas_10 + $quant_caldas_11 + $quant_caldas_12 + $quant_caldas_13 + $quant_caldas_14 + $quant_caldas_15 + $quant_caldas_16 + $quant_caldas_17 + $quant_caldas_18 + $quant_caldas_19 + $quant_caldas_20 + $quant_complementos + $quant_complementos_2 + $quant_complementos_3 + $quant_complementos_4 + $quant_complementos_5 + $quant_complementos_6 + $quant_complementos_7 + $quant_complementos_8 + $quant_complementos_9 + $quant_complementos_10 + $quant_complementos_11 + $quant_complementos_12 + $quant_complementos_13 + $quant_complementos_14 + $quant_complementos_15 + $quant_complementos_16 + $quant_complementos_17 + $quant_complementos_18 + $quant_complementos_19 + $quant_complementos_20 + $quant_sorvetes + $quant_sorvetes_2 + $quant_sorvetes_3 + $quant_sorvetes_4 + $quant_sorvetes_5 + $quant_sorvetes_6 + $quant_sorvetes_7 + $quant_sorvetes_8 + $quant_sorvetes_9 + $quant_sorvetes_10 + $quant_sorvetes_11 + $quant_sorvetes_12 + $quant_sorvetes_13 + $quant_sorvetes_14 + $quant_sorvetes_15 + $quant_sorvetes_16 + $quant_sorvetes_17 + $quant_sorvetes_18 + $quant_sorvetes_19 + $quant_sorvetes_20 + $frete + 0.50;
+                            $soma =  $valor_acai + $valor_acai_2 + $valor_acai_3 + $valor_acai_4 + $valor_acai_5 + $valor_acai_6 + $valor_acai_7 + $valor_acai_8 + $valor_acai_9 + $valor_acai_10 + $valor_acai_11 + $valor_acai_12 + $valor_acai_13 + $valor_acai_14 + $valor_acai_15 + $valor_acai_16 + $valor_acai_17 + $valor_acai_18 + $valor_acai_19 + $valor_acai_20 + $quant_frutas + $quant_frutas_2 + $quant_frutas_3 + $quant_frutas_4 + $quant_frutas_5 + $quant_frutas_6 + $quant_frutas_7 + $quant_frutas_8 + $quant_frutas_9 + $quant_frutas_10 + $quant_frutas_11 + $quant_frutas_12 + $quant_frutas_13 + $quant_frutas_14 + $quant_frutas_14 + $quant_frutas_16 + $quant_frutas_17 + $quant_frutas_18 + $quant_frutas_19 + $quant_frutas_20 + $quant_caldas + $quant_caldas_2 +  $quant_caldas_3 + $quant_caldas_4 + $quant_caldas_5 + $quant_caldas_6 + $quant_caldas_7 + $quant_caldas_8 + $quant_caldas_9 + $quant_caldas_10 + $quant_caldas_11 + $quant_caldas_12 + $quant_caldas_13 + $quant_caldas_14 + $quant_caldas_15 + $quant_caldas_16 + $quant_caldas_17 + $quant_caldas_18 + $quant_caldas_19 + $quant_caldas_20 + $quant_complementos + $quant_complementos_2 + $quant_complementos_3 + $quant_complementos_4 + $quant_complementos_5 + $quant_complementos_6 + $quant_complementos_7 + $quant_complementos_8 + $quant_complementos_9 + $quant_complementos_10 + $quant_complementos_11 + $quant_complementos_12 + $quant_complementos_13 + $quant_complementos_14 + $quant_complementos_15 + $quant_complementos_16 + $quant_complementos_17 + $quant_complementos_18 + $quant_complementos_19 + $quant_complementos_20 + $quant_sorvetes + $quant_sorvetes_2 + $quant_sorvetes_3 + $quant_sorvetes_4 + $quant_sorvetes_5 + $quant_sorvetes_6 + $quant_sorvetes_7 + $quant_sorvetes_8 + $quant_sorvetes_9 + $quant_sorvetes_10 + $quant_sorvetes_11 + $quant_sorvetes_12 + $quant_sorvetes_13 + $quant_sorvetes_14 + $quant_sorvetes_15 + $quant_sorvetes_16 + $quant_sorvetes_17 + $quant_sorvetes_18 + $quant_sorvetes_19 + $quant_sorvetes_20 + $frete + (0.50 * $vezes) - 1;
                             $ped_1_db = $valor_acai + $quant_frutas + $quant_caldas + $quant_complementos + $quant_sorvetes + $frete;
                             $valor_total = number_format($soma, 2, '.', '');
                             $_SESSION['total'] = $valor_total;
@@ -3639,11 +3431,11 @@ date_default_timezone_set('America/Sao_Paulo');
                             $cod_pedido = mysqli_insert_id($link);
                             $_SESSION['cod_pedido'] = $cod_pedido;
 
-                            header("Location:confirmar_pedido.php");
+                            //header("Location:confirmar_pedido.php");
                             
                             
                             
-                        }
+                        
                     
 
                   
