@@ -83,28 +83,33 @@
                             <ul class="sidebar-menu metismenu" id="sidebar-menu">
                             <?php 
 
-if(isset($_SESSION['admin'])){
+                            if(isset($_SESSION['admin'])){
 
-    echo " <li class='sidebar-nav'>
-    <a href='index.php'>
-        <i class='fa fa-home'></i> Painel </a>
-</li>
-<li>
-    <a href='clientes.php'>
-        <i class='fa fa-group'></i> Clientes
-    </a>
-</li>
-<li class='active'>
-    <a href='pedido.php'>
-        <i class='fa fa-pencil-square-o'></i> Pedido </a>
-</li>";
+                                echo "  <li class='sidebar-nav'>
+                                            <a href='index.php'>
+                                                <i class='fa fa-home'></i> Painel </a>
+                                        </li>
+                                        <li>
+                                            <a href='adicionar_endereco.php'>
+                                                <i class='fa fa-globe'></i> Gerenciar Endereços
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href='clientes.php'>
+                                                <i class='fa fa-group'></i> Clientes
+                                            </a>
+                                        </li>
+                                        <li class='active'>
+                                            <a href='pedido.php'>
+                                                <i class='fa fa-pencil-square-o'></i> Pedido </a>
+                                        </li>";
 
-}else{
-    echo "<li class='active'>
-    <a href='pedido.php'>
-        <i class='fa fa-pencil-square-o'></i> Pedido </a>
-</li>";
-}
+                            }else{
+                                echo "  <li class='active'>
+                                            <a href='pedido.php'>
+                                                <i class='fa fa-pencil-square-o'></i> Pedido </a>
+                                        </li>";
+                                }
 
 ?>
                                 

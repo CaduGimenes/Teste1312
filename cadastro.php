@@ -26,7 +26,9 @@
         </script>
     </head>
     <body>
-        <?php session_start() ?>
+        <?php session_start();
+        include $_SERVER['DOCUMENT_ROOT']."/dist/includes/banco.php";
+        ?>
         <div class="main-wrapper">
             <div class="app" id="app">
                 <header class="header">
@@ -86,6 +88,11 @@
                                             echo " <li class='sidebar-nav'>
                                             <a href='index.php'>
                                                 <i class='fa fa-home'></i> Painel </a>
+                                        </li>
+                                        <li>
+                                            <a href='adicionar_endereco.php'>
+                                                <i class='fa fa-globe'></i> Gerenciar Endereços
+                                            </a>
                                         </li>
                                         <li>
                                             <a href='clientes.php'>
@@ -278,58 +285,16 @@
                                                                             <label class="control-label">Bairro<font color="red">*</font></label>
                                                                             <select required class="form-control" name="bairro" id="bairro">
                                                                            <option>&nbsp;-- Selecionar --&nbsp;&nbsp;&nbsp;</option>
-                                                                           <option value="Alemoa">Alemoa</option>
-                                                                           <option value="Biquinha">Biquinha</option>
-                                                                           <option value="Boa Vista">Boa Vista</option>
-                                                                           <option value="Bom Retiro">Bom Retiro</option>
-                                                                           <option value="Campo Grande">Campo Grande</option>
-                                                                           <option value="Caneleira">Caneleira</option>
-                                                                           <option value="Canal 1">Canal 1</option>
-                                                                           <option value="Canal 2">Canal 2</option>
-                                                                           <option value="Canal 3">Canal 3</option>
-                                                                           <option value="Canal 4">Canal 4</option>
-                                                                           <option value="Canal 5">Canal 5</option>
-                                                                           <option value="Cascatinha">Cascatinha</option>
-                                                                           <option value="Catarina">Catarina</option>
-                                                                           <option value="Caxeta">Caxeta</option>
-                                                                           <option value="Centro Santos">Centro Santos</option>
-                                                                           <option value="Centro São Vicente">Centro São Vicente</option>
-                                                                           <option value="Cidade Nautica">Cidade Nautica</option>
-                                                                           <option value="Conselheiro Nébias">Conselheiro Nébias</option>
-                                                                           <option value="Divisa Praia">Divisa Praia</option>
-                                                                           <option value="Divisa Tambores">Divisa Tambores</option>
-                                                                           <option value="Esplanada">Esplanada</option>
-                                                                           <option value="Fatima">Fatima</option>
-                                                                           <option value="Gonzaga">Gonzaga</option>
-                                                                           <option value="Gonzaguinha">Gonzaguinha</option>
-                                                                           <option value="Ilha Porchat">Ilha Porchat</option>
-                                                                           <option value="Ilheu">Ilheu</option>
-                                                                           <option value="Itaraté">Itaraté</option>
-                                                                           <option value="Jardim Guassu">Jardim Guassu</option>
-                                                                           <option value="Jardim Independencia">Jardim Independencia</option>
-                                                                           <option value="Jockey Clube">Jockey Clube</option>
-                                                                           <option value="José Menino">José Menino</option>
-                                                                           <option value="Macuco">Macuco</option>
-                                                                           <option value="Marapé">Marapé</option>
-                                                                           <option value="Morros">Morros</option>
-                                                                           <option value="Nautica 3">Nautica 3</option>
-                                                                           <option value="Nossa Sra. de Fatima">Nossa Sra. de Fatima</option>
-                                                                           <option value="Nova Cintra">Nova Cintra</option>
-                                                                           <option value="Parque Bitaru">Parque Bitaru</option>
-                                                                           <option value="Parque São Vicente">Parque São Vicente</option>
-                                                                           <option value="Prainha">Prainha</option>
-                                                                           <option value="Saboó">Saboó</option>
-                                                                           <option value="Sambaiatuba">Sambaiatuba</option>
-                                                                           <option value="São Manoel">São Manoel</option>
-                                                                           <option value="Tancredo">Tancreto</option>
-                                                                           <option value="Vila Belmiro">Vila Belmiro</option>
-                                                                           <option value="Vila Margarida">Vila Margarida</option>
-                                                                           <option value="Vila Matias">Vila Matias</option>
-                                                                           <option value="Vila Melo">Vila Melo</option>
-                                                                           <option value="Vila São Jorge Santos">Vila São Jorge Santos </option>
-                                                                           <option value="Vila São Jorge SV">Vila São Jorge SV</option>
-                                                                           <option value="Votorua">Votorua</option>
-                                                                           <option value="Zona Noroeste">Zona Noroeste</option>
+                                                                           <?php
+
+                                                                           $sql = mysqli_query($link,"SELECT * FROM tb_endereco ORDER BY nm_bairro ASC");
+
+                                                                            while ($retorna = mysqli_fetch_assoc($sql)) {
+                                                                            $bairro = $retorna['nm_bairro'];
+                                                                            echo "<option value='$bairro'>$bairro</option>";
+
+                                                                            }
+                                                                        ?>
                                                                        </select>
                                                                         </div>
                                                                     
@@ -389,7 +354,6 @@
                         <?php 
 
 
-                            include $_SERVER['DOCUMENT_ROOT']."/dist/includes/banco.php";
 
                             if(isset($_POST['nome'], $_POST['rua'],$_POST['tele'],$_POST['cel'],$_POST['bairro'],$_POST['ref'],$_POST['casa'])){
 

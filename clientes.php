@@ -87,6 +87,11 @@
                                         <i class="fa fa-home"></i> Painel </a>
                                 </li>
                                 <li>
+                                    <a href="adicionar_endereco.php">
+                                        <i class="fa fa-globe"></i> Gerenciar Endereços
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="clientes.php">
                                         <i class="fa fa-group"></i> Clientes
                                     </a>
