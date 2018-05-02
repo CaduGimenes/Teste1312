@@ -151,9 +151,7 @@ date_default_timezone_set('America/Sao_Paulo');
                $valor_acai_18 = intval($_POST['valor_acai_18']);
                $valor_acai_19 = intval($_POST['valor_acai_19']);
                $valor_acai_20 = intval($_POST['valor_acai_20']);
-
                
-
 
 
                         //Verificando se existe um pedido
@@ -170,8 +168,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                 print 'Total de checkboxs marcados: '. $nChecks . '<br />'; 
 
                                 if($valor_acai == 7){
-                                    $pedido = "Mini";
-                                    $_SESSION['pedido1'] = $pedido;
+                                    
                                     if($nChecks > 1){
                                         $quant_frutas = $nChecks - 1;
                                     }
@@ -187,16 +184,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     }
 
                                 }else if($valor_acai == 10 || $valor_acai == 14){
-                                    if($valor_acai == 10){
-                                        $pedido = "P";
-                                        $_SESSION['pedido1'] = $pedido;
-                                    }
-
-                                    if($valor_acai == 14){
-                                        $pedido = "M";
-                                        $_SESSION['pedido1'] = $pedido;
-                                    }
-
+                                    
                                     if($nChecks > 2){
                                         $quant_frutas = $nChecks - 2;
                                     }
@@ -209,8 +197,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     }
 
                                 }else if($valor_acai == 23){
-                                    $pedido = "G";
-                                    $_SESSION['pedido1'] = $pedido;
+                                    
                                     if($nChecks > 3){
                                         $quant_frutas = $nChecks - 3;
                                     }
@@ -223,19 +210,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     }
 
                                 }else if($valor_acai == 18 || $valor_acai == 35 || $valor_acai == 50){
-                                    if($valor_acai == 18){
-                                        $pedido = "Barca Pequena";
-                                        $_SESSION['pedido1'] = $pedido;
-                                    }
-                                    if($valor_acai == 35){
-                                        $pedido = "Barca Média";
-                                        $_SESSION['pedido1'] = $pedido;
-                                    }
-                                    if($valor_acai == 50){
-                                        $pedido = "Barca Grande";
-                                        $_SESSION['pedido1'] = $pedido;
-                                    }
-
+                                    
                                     if($nChecks > 4){
                                         $quant_frutas = $nChecks - 4;
                                     }
@@ -319,8 +294,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_2 . '<br />'; 
     
                                     if($valor_acai_2 == 7){
-                                        $pedido_2 = "Mini";
-                                        $_SESSION['pedido2'] = $pedido_2;
+                                        
                                         if($nChecks_2 > 1){
                                             $quant_frutas_2 = $nChecks_2 - 1;
                                         }
@@ -336,15 +310,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_2 == 10 || $valor_acai_2 == 14){
-                                        if($valor_acai_2 == 10){
-                                            $pedido_2 = "P";
-                                            $_SESSION['pedido2'] = $pedido_2;
-                                        }
-    
-                                        if($valor_acai_2 == 14){
-                                            $pedido_2 = "M";
-                                            $_SESSION['pedido2'] = $pedido_2;
-                                        }
     
                                         if($nChecks_2 > 2){
                                             $quant_frutas_2 = $nChecks_2 - 2;
@@ -358,8 +323,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_2 == 23){
-                                        $pedido_2 = "G";
-                                        $_SESSION['pedido2'] = $pedido_2;
+                                       
                                         if($nChecks_2 > 3){
                                             $quant_frutas_2 = $nChecks_2 - 3;
                                         }
@@ -372,19 +336,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_2 == 18 || $valor_acai_2 == 35 || $valor_acai_2 == 50){
-                                        if($valor_acai_2 == 18){
-                                            $pedido_2 = "Barca Pequena";
-                                            $_SESSION['pedido2'] = $pedido_2;
-                                        }
-                                        if($valor_acai_2 == 35){
-                                            $pedido_2 = "Barca Média";
-                                            $_SESSION['pedido2'] = $pedido_2;
-                                        }
-                                        if($valor_acai_2 == 50){
-                                            $pedido_2 = "Barca Grande";
-                                            $_SESSION['pedido2'] = $pedido_2;
-                                        }
-    
+                                        
                                         if($nChecks_2 > 4){
                                             $quant_frutas_2 = $nChecks_2 - 4;
                                         }
@@ -396,7 +348,8 @@ date_default_timezone_set('America/Sao_Paulo');
                                             echo "Valor Sorvete: ".$quant_sorvetes_2;
                                         }
     
-    
+                                        $_SESSION['tamanho_acai_2'] = $pedido_2;
+
                                     }
     
                                     if(isset($_POST['frutas_2'])){
@@ -440,7 +393,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                            
                                         }
     
-                                        $_SESSION['tamanho_acai_2'] = $pedido_2;
                                     }
     
                                     if(isset($_POST['sorvete_2'])){
@@ -458,11 +410,11 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             mysqli_query($link,"INSERT INTO tb_pedido(vl_pedido,vl_troco,dt_data,hr_pedido,vl_acai) VALUES('$ped_2_db','$print_sub','$dataEUA','$hora','$valor_acai_2')");
 
-
+                        
                             //Verificando se existe pedido 3
                             if($valor_acai_3 != 0){
                                 $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_3'] = 1;
+                                $_SESSION['pedido3'];
                                 echo "<br>Pedido Nº3<br>";
 
                                 if ((bool)$nChecks_3 = count($_POST['frutas_3'])) {
@@ -474,8 +426,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_3 . '<br />'; 
     
                                     if($valor_acai_3 == 7){
-                                        $pedido_3 = "Mini";
-                                        $_SESSION['pedido3'] = $pedido_3;
+                                       
                                         if($nChecks_3 > 1){
                                             $quant_frutas_3 = $nChecks_3 - 1;
                                         }
@@ -491,16 +442,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_3 == 10 || $valor_acai_3 == 14){
-                                        if($valor_acai_3 == 10){
-                                            $pedido_3 = "P";
-                                            $_SESSION['pedido3'] = $pedido_3;
-                                        }
-    
-                                        if($valor_acai_3 == 14){
-                                            $pedido_3 = "M";
-                                            $_SESSION['pedido3'] = $pedido_3;
-                                        }
-    
+                                        
                                         if($nChecks_3 > 2){
                                             $quant_frutas_3 = $nChecks_3 - 2;
                                             echo $quant_frutas_3;
@@ -514,8 +456,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_3 == 23){
-                                        $pedido_3 = "G";
-                                        $_SESSION['pedido3'] = $pedido_3;
+                                       
                                         if($nChecks_3 > 3){
                                             $quant_frutas_3 = $nChecks_3 - 3;
                                         }
@@ -528,19 +469,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_3 == 18 || $valor_acai_3 == 35 || $valor_acai_3 == 50){
-                                        if($valor_acai_3 == 18){
-                                            $pedido_3 = "Barca Pequena";
-                                            $_SESSION['pedido3'] = $pedido_3;
-                                        }
-                                        if($valor_acai_3 == 35){
-                                            $pedido_3 = "Barca Média";
-                                            $_SESSION['pedido3'] = $pedido_3;
-                                        }
-                                        if($valor_acai_3 == 50){
-                                            $pedido_3 = "Barca Grande";
-                                            $_SESSION['pedido3'] = $pedido_3;
-                                        }
-    
+                                        
                                         if($nChecks_3 > 4){
                                             $quant_frutas_3 = $nChecks_3 - 4;
                                         }
@@ -551,7 +480,8 @@ date_default_timezone_set('America/Sao_Paulo');
                                             $quant_sorvetes_3 = $sorveteCheck_3 * 2.50;
                                             echo "Valor Sorvete: ".$quant_sorvetes_3;
                                         }
-    
+                                        $_SESSION['tamanho_acai_3'] = $pedido_3;
+
     
                                     }
     
@@ -596,7 +526,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                            
                                         }
     
-                                        $_SESSION['tamanho_acai_3'] = $pedido_3;
                                     }
     
                                     if(isset($_POST['sorvete_3'])){
@@ -632,8 +561,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_4 . '<br />'; 
     
                                     if($valor_acai_4 == 7){
-                                        $pedido_4 = "Mini";
-                                        $_SESSION['pedido4'] = $pedido_4;
+                                       
                                         if($nChecks_4 > 1){
                                             $quant_frutas_4 = $nChecks_4 - 1;
                                         }
@@ -649,16 +577,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_4 == 10 || $valor_acai_4 == 14){
-                                        if($valor_acai_4 == 10){
-                                            $pedido_4 = "P";
-                                            $_SESSION['pedido4'] = $pedido_4;
-                                        }
-    
-                                        if($valor_acai_4 == 14){
-                                            $pedido_4 = "M";
-                                            $_SESSION['pedido4'] = $pedido_4;
-                                        }
-    
+                                        
                                         if($nChecks_4 > 2){
                                             $quant_frutas_4 = $nChecks_4 - 2;
                                         }
@@ -670,8 +589,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_4 == 23){
-                                        $pedido_4 = "G";
-                                        $_SESSION['pedido4'] = $pedido_4;
+                                        
                                         if($nChecks_4 > 3){
                                             $quant_frutas_4 = $nChecks_4 - 3;
                                         }
@@ -684,19 +602,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_4 == 18 || $valor_acai_4 == 35 || $valor_acai_4 == 50){
-                                        if($valor_acai_4 == 18){
-                                            $pedido_4 = "Barca Pequena";
-                                            $_SESSION['pedido4'] = $pedido_4;
-                                        }
-                                        if($valor_acai_4 == 35){
-                                            $pedido_4 = "Barca Média";
-                                            $_SESSION['pedido4'] = $pedido_4;
-                                        }
-                                        if($valor_acai_4 == 50){
-                                            $pedido_4 = "Barca Grande";
-                                            $_SESSION['pedido4'] = $pedido_4;
-                                        }
-    
+                                       
                                         if($nChecks_4 > 4){
                                             $quant_frutas_4 = $nChecks_4 - 4;
                                         }
@@ -788,8 +694,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_5 . '<br />'; 
     
                                     if($valor_acai_5 == 7){
-                                        $pedido_5 = "Mini";
-                                        $_SESSION['pedido5'] = $pedido_5;
+                                       
                                         if($nChecks_5 > 1){
                                             $quant_frutas_5 = $nChecks_5 - 1;
                                         }
@@ -805,16 +710,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_5 == 10 || $valor_acai_5 == 14){
-                                        if($valor_acai_5 == 10){
-                                            $pedido_5 = "P";
-                                            $_SESSION['pedido5'] = $pedido_5;
-                                        }
-    
-                                        if($valor_acai_5 == 14){
-                                            $pedido_5 = "M";
-                                            $_SESSION['pedido5'] = $pedido_5;
-                                        }
-    
+                                       
                                         if($nChecks_5 > 2){
                                             $quant_frutas_5 = $nChecks_5 - 2;
                                         }
@@ -827,8 +723,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_5 == 23){
-                                        $pedido_5 = "G";
-                                        $_SESSION['pedido5'] = $pedido_5;
+                                        
                                         if($nChecks_5 > 3){
                                             $quant_frutas_5 = $nChecks_5 - 3;
                                         }
@@ -841,18 +736,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_5 == 18 || $valor_acai_5 == 35 || $valor_acai_5 == 50){
-                                        if($valor_acai_5 == 18){
-                                            $pedido_5 = "Barca Pequena";
-                                            $_SESSION['pedido5'] = $pedido_5;
-                                        }
-                                        if($valor_acai_5 == 35){
-                                            $pedido_5 = "Barca Média";
-                                            $_SESSION['pedido5'] = $pedido_5;
-                                        }
-                                        if($valor_acai_5 == 50){
-                                            $pedido_5 = "Barca Grande";
-                                            $_SESSION['pedido5'] = $pedido_5;
-                                        }
     
                                         if($nChecks_5 > 4){
                                             $quant_frutas_5 = $nChecks_5 - 4;
@@ -944,8 +827,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_6 . '<br />'; 
     
                                     if($valor_acai_6 == 7){
-                                        $pedido_6 = "Mini";
-                                        $_SESSION['pedido6'] = $pedido_6;
+                                       
                                         if($nChecks_6 > 1){
                                             $quant_frutas_6 = $nChecks_6 - 1;
                                         }
@@ -961,16 +843,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_6 == 10 || $valor_acai_6 == 14){
-                                        if($valor_acai_6 == 10){
-                                            $pedido_6 = "P";
-                                            $_SESSION['pedido6'] = $pedido_6;
-                                        }
-    
-                                        if($valor_acai_6 == 14){
-                                            $pedido_6 = "M";
-                                            $_SESSION['pedido6'] = $pedido_6;
-                                        }
-    
+                                        
                                         if($nChecks_6 > 2){
                                             $quant_frutas_6 = $nChecks_6 - 2;
                                         }
@@ -983,8 +856,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_6 == 23){
-                                        $pedido_6 = "G";
-                                        $_SESSION['pedido6'] = $pedido_6;
+                                        
                                         if($nChecks_6 > 3){
                                             $quant_frutas_6 = $nChecks_6 - 3;
                                         }
@@ -997,19 +869,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_6 == 18 || $valor_acai_6 == 35 || $valor_acai_6 == 50){
-                                        if($valor_acai_6 == 18){
-                                            $pedido_6 = "Barca Pequena";
-                                            $_SESSION['pedido6'] = $pedido_6;
-                                        }
-                                        if($valor_acai_6 == 35){
-                                            $pedido_6 = "Barca Média";
-                                            $_SESSION['pedido6'] = $pedido_6;
-                                        }
-                                        if($valor_acai_6 == 50){
-                                            $pedido_6 = "Barca Grande";
-                                            $_SESSION['pedido6'] = $pedido_6;
-                                        }
-    
+                                        
                                         if($nChecks_6 > 4){
                                             $quant_frutas_6 = $nChecks_6 - 4;
                                         }
@@ -1100,8 +960,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_7 . '<br />'; 
     
                                     if($valor_acai_7 == 7){
-                                        $pedido_7 = "Mini";
-                                        $_SESSION['pedido7'] = $pedido_7;
+                                       
                                         if($nChecks_7 > 1){
                                             $quant_frutas_7 = $nChecks_7 - 1;
                                         }
@@ -1117,16 +976,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_7 == 10 || $valor_acai_7 == 14){
-                                        if($valor_acai_7 == 10){
-                                            $pedido_7 = "P";
-                                            $_SESSION['pedido7'] = $pedido_7;
-                                        }
-    
-                                        if($valor_acai_7 == 14){
-                                            $pedido_7 = "M";
-                                            $_SESSION['pedido7'] = $pedido_7;
-                                        }
-    
+                                        
                                         if($nChecks_7 > 2){
                                             $quant_frutas_7 = $nChecks_7 - 2;
                                         }
@@ -1139,8 +989,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_7 == 23){
-                                        $pedido_7 = "G";
-                                        $_SESSION['pedido7'] = $pedido_7;
+                                        
                                         if($nChecks_7 > 3){
                                             $quant_frutas_7 = $nChecks_7 - 3;
                                         }
@@ -1153,19 +1002,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_7 == 18 || $valor_acai_7 == 35 || $valor_acai_7 == 50){
-                                        if($valor_acai_7 == 18){
-                                            $pedido_7 = "Barca Pequena";
-                                            $_SESSION['pedido7'] = $pedido_7;
-                                        }
-                                        if($valor_acai_7 == 35){
-                                            $pedido_7 = "Barca Média";
-                                            $_SESSION['pedido7'] = $pedido_7;
-                                        }
-                                        if($valor_acai_7 == 50){
-                                            $pedido_7 = "Barca Grande";
-                                            $_SESSION['pedido7'] = $pedido_7;
-                                        }
-    
+                                        
                                         if($nChecks_7 > 4){
                                             $quant_frutas_7 = $nChecks_7 - 4;
                                         }
@@ -1243,8 +1080,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 8
                             if($valor_acai_8 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_8'] = 1;
+                                
                                 echo "<br>Pedido Nº8<br>";
 
                                 if ((bool)$nChecks_8 = count($_POST['frutas_8'])) {
@@ -1256,8 +1092,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_8 . '<br />'; 
     
                                     if($valor_acai_8 == 7){
-                                        $pedido_8 = "Mini";
-                                        $_SESSION['pedido8'] = $pedido_8;
+                                        
                                         if($nChecks_8 > 1){
                                             $quant_frutas_8 = $nChecks_8 - 1;
                                         }
@@ -1273,15 +1108,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_8 == 10 || $valor_acai_8 == 14){
-                                        if($valor_acai_8 == 10){
-                                            $pedido_8 = "P";
-                                            $_SESSION['pedido8'] = $pedido_8;
-                                        }
-    
-                                        if($valor_acai_8 == 14){
-                                            $pedido_8 = "M";
-                                            $_SESSION['pedido8'] = $pedido_8;
-                                        }
     
                                         if($nChecks_8 > 2){
                                             $quant_frutas_8 = $nChecks_8 - 2;
@@ -1295,8 +1121,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_8 == 23){
-                                        $pedido_8 = "G";
-                                        $_SESSION['pedido8'] = $pedido_8;
+                                        
                                         if($nChecks_8 > 3){
                                             $quant_frutas_8 = $nChecks_8 - 3;
                                         }
@@ -1309,18 +1134,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_8 == 18 || $valor_acai_8 == 35 || $valor_acai_8 == 50){
-                                        if($valor_acai_8 == 18){
-                                            $pedido_8 = "Barca Pequena";
-                                            $_SESSION['pedido8'] = $pedido_8;
-                                        }
-                                        if($valor_acai_8 == 35){
-                                            $pedido_8 = "Barca Média";
-                                            $_SESSION['pedido8'] = $pedido_8;
-                                        }
-                                        if($valor_acai_8 == 50){
-                                            $pedido_8 = "Barca Grande";
-                                            $_SESSION['pedido8'] = $pedido_8;
-                                        }
     
                                         if($nChecks_8 > 4){
                                             $quant_frutas_8 = $nChecks_8 - 4;
@@ -1412,8 +1225,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_9 . '<br />'; 
     
                                     if($valor_acai_9 == 7){
-                                        $pedido_9 = "Mini";
-                                        $_SESSION['pedido9'] = $pedido_9;
+                                        
                                         if($nChecks_9 > 1){
                                             $quant_frutas_9 = $nChecks_9 - 1;
                                         }
@@ -1429,16 +1241,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_9 == 10 || $valor_acai_9 == 14){
-                                        if($valor_acai_9 == 10){
-                                            $pedido_9 = "P";
-                                            $_SESSION['pedido9'] = $pedido_9;
-                                        }
-    
-                                        if($valor_acai_9 == 14){
-                                            $pedido_9 = "M";
-                                            $_SESSION['pedido9'] = $pedido_9;
-                                        }
-    
+                                       
                                         if($nChecks_9 > 2){
                                             $quant_frutas_9 = $nChecks_9 - 2;
                                         }
@@ -1451,8 +1254,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_9 == 23){
-                                        $pedido_9 = "G";
-                                        $_SESSION['pedido9'] = $pedido_9;
+                                       
                                         if($nChecks_9 > 3){
                                             $quant_frutas_9 = $nChecks_9 - 3;
                                         }
@@ -1465,18 +1267,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_9 == 18 || $valor_acai_9 == 35 || $valor_acai_9 == 50){
-                                        if($valor_acai_9 == 18){
-                                            $pedido_9 = "Barca Pequena";
-                                            $_SESSION['pedido9'] = $pedido_9;
-                                        }
-                                        if($valor_acai_9 == 35){
-                                            $pedido_9 = "Barca Média";
-                                            $_SESSION['pedido9'] = $pedido_9;
-                                        }
-                                        if($valor_acai_9 == 50){
-                                            $pedido_9 = "Barca Grande";
-                                            $_SESSION['pedido9'] = $pedido_9;
-                                        }
     
                                         if($nChecks_9 > 4){
                                             $quant_frutas_9 = $nChecks_9 - 4;
@@ -1555,8 +1345,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 10
                             if($valor_acai_10 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_10'] = 1;
+                                
                                 echo "<br>Pedido Nº10<br>";
 
                                 if ((bool)$nChecks_10 = count($_POST['frutas_10'])) {
@@ -1568,8 +1357,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_10 . '<br />'; 
     
                                     if($valor_acai_10 == 7){
-                                        $pedido_10 = "Mini";
-                                        $_SESSION['pedido10'] = $pedido_10;
+                                       
                                         if($nChecks_10 > 1){
                                             $quant_frutas_10 = $nChecks_10 - 1;
                                         }
@@ -1585,16 +1373,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_10 == 10 || $valor_acai_10 == 14){
-                                        if($valor_acai_10 == 10){
-                                            $pedido_10 = "P";
-                                            $_SESSION['pedido10'] = $pedido_10;
-                                        }
-    
-                                        if($valor_acai_10 == 14){
-                                            $pedido_10 = "M";
-                                            $_SESSION['pedido10'] = $pedido_10;
-                                        }
-    
+                                        
                                         if($nChecks_10 > 2){
                                             $quant_frutas_10 = $nChecks_10 - 2;
                                         }
@@ -1607,8 +1386,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_10 == 23){
-                                        $pedido_10 = "G";
-                                        $_SESSION['pedido10'] = $pedido_10;
+                                       
                                         if($nChecks_10 > 3){
                                             $quant_frutas_10 = $nChecks_10 - 3;
                                         }
@@ -1621,18 +1399,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_10 == 18 || $valor_acai_10 == 35 || $valor_acai_10 == 50){
-                                        if($valor_acai_10 == 18){
-                                            $pedido_10 = "Barca Pequena";
-                                            $_SESSION['pedido10'] = $pedido_10;
-                                        }
-                                        if($valor_acai_10 == 35){
-                                            $pedido_10 = "Barca Média";
-                                            $_SESSION['pedido10'] = $pedido_10;
-                                        }
-                                        if($valor_acai_10 == 50){
-                                            $pedido_10 = "Barca Grande";
-                                            $_SESSION['pedido10'] = $pedido_10;
-                                        }
     
                                         if($nChecks_10 > 4){
                                             $quant_frutas_10 = $nChecks_10 - 4;
@@ -1711,8 +1477,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 11
                             if($valor_acai_11 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_11'] = 1;
+                                
                                 echo "<br>Pedido Nº11<br>";
 
                                 if ((bool)$nChecks_11 = count($_POST['frutas_11'])) {
@@ -1724,8 +1489,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_11 . '<br />'; 
     
                                     if($valor_acai_11 == 7){
-                                        $pedido_11 = "Mini";
-                                        $_SESSION['pedido11'] = $pedido_11;
+                                       
                                         if($nChecks_11 > 1){
                                             $quant_frutas_11 = $nChecks_11 - 1;
                                         }
@@ -1741,15 +1505,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_11 == 10 || $valor_acai_11 == 14){
-                                        if($valor_acai_11 == 10){
-                                            $pedido_11 = "P";
-                                            $_SESSION['pedido11'] = $pedido_11;
-                                        }
-    
-                                        if($valor_acai_11 == 14){
-                                            $pedido_11 = "M";
-                                            $_SESSION['pedido11'] = $pedido_11;
-                                        }
     
                                         if($nChecks_11 > 2){
                                             $quant_frutas_11 = $nChecks_11 - 2;
@@ -1763,8 +1518,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_11 == 23){
-                                        $pedido_11 = "G";
-                                        $_SESSION['pedido11'] = $pedido_11;
+                                        
                                         if($nChecks_11 > 3){
                                             $quant_frutas_11 = $nChecks_11 - 3;
                                         }
@@ -1777,19 +1531,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_11 == 18 || $valor_acai_11 == 35 || $valor_acai_11 == 50){
-                                        if($valor_acai_11 == 18){
-                                            $pedido_11 = "Barca Pequena";
-                                            $_SESSION['pedido11'] = $pedido_11;
-                                        }
-                                        if($valor_acai_11 == 35){
-                                            $pedido_11 = "Barca Média";
-                                            $_SESSION['pedido11'] = $pedido_11;
-                                        }
-                                        if($valor_acai_11 == 50){
-                                            $pedido_11 = "Barca Grande";
-                                            $_SESSION['pedido11'] = $pedido_11;
-                                        }
-    
+                                        
                                         if($nChecks_11 > 4){
                                             $quant_frutas_11 = $nChecks_11 - 4;
                                         }
@@ -1867,8 +1609,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 12
                             if($valor_acai_12 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_12'] = 1;
+                               
                                 echo "<br>Pedido Nº12<br>";
 
                                 if ((bool)$nChecks_12 = count($_POST['frutas_12'])) {
@@ -1880,8 +1621,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_12 . '<br />'; 
     
                                     if($valor_acai_12 == 7){
-                                        $pedido_12 = "Mini";
-                                        $_SESSION['pedido12'] = $pedido_12;
+                                        
                                         if($nChecks_12 > 1){
                                             $quant_frutas_12 = $nChecks_12 - 1;
                                         }
@@ -1897,15 +1637,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_12 == 10 || $valor_acai_12 == 14){
-                                        if($valor_acai_12 == 10){
-                                            $pedido_12 = "P";
-                                            $_SESSION['pedido12'] = $pedido_12;
-                                        }
-    
-                                        if($valor_acai_12 == 14){
-                                            $pedido_12 = "M";
-                                            $_SESSION['pedido12'] = $pedido_12;
-                                        }
     
                                         if($nChecks_12 > 2){
                                             $quant_frutas_12 = $nChecks_12 - 2;
@@ -1919,8 +1650,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_12 == 23){
-                                        $pedido_12 = "G";
-                                        $_SESSION['pedido12'] = $pedido_12;
+                                        
                                         if($nChecks_12 > 3){
                                             $quant_frutas_12 = $nChecks_12 - 3;
                                         }
@@ -1933,19 +1663,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_12 == 18 || $valor_acai_12 == 35 || $valor_acai_12 == 50){
-                                        if($valor_acai_12 == 18){
-                                            $pedido_12 = "Barca Pequena";
-                                            $_SESSION['pedido12'] = $pedido_12;
-                                        }
-                                        if($valor_acai_12 == 35){
-                                            $pedido_12 = "Barca Média";
-                                            $_SESSION['pedido12'] = $pedido_12;
-                                        }
-                                        if($valor_acai_12 == 50){
-                                            $pedido_12 = "Barca Grande";
-                                            $_SESSION['pedido12'] = $pedido_12;
-                                        }
-    
+                                        
                                         if($nChecks_12 > 4){
                                             $quant_frutas_12 = $nChecks_12 - 4;
                                         }
@@ -2023,8 +1741,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 13
                             if($valor_acai_13 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_13'] = 1;
+                                
                                 echo "<br>Pedido Nº13<br>";
 
                                 if ((bool)$nChecks_13 = count($_POST['frutas_13'])) {
@@ -2036,8 +1753,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_13 . '<br />'; 
     
                                     if($valor_acai_13 == 7){
-                                        $pedido_13 = "Mini";
-                                        $_SESSION['pedido13'] = $pedido_13;
+                                        
                                         if($nChecks_13 > 1){
                                             $quant_frutas_13 = $nChecks_13 - 1;
                                         }
@@ -2053,15 +1769,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_13 == 10 || $valor_acai_13 == 14){
-                                        if($valor_acai_13 == 10){
-                                            $pedido_13 = "P";
-                                            $_SESSION['pedido13'] = $pedido_13;
-                                        }
-    
-                                        if($valor_acai_13 == 14){
-                                            $pedido_13 = "M";
-                                            $_SESSION['pedido13'] = $pedido_13;
-                                        }
     
                                         if($nChecks_13 > 2){
                                             $quant_frutas_13 = $nChecks_13 - 2;
@@ -2075,8 +1782,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_13 == 23){
-                                        $pedido_13 = "G";
-                                        $_SESSION['pedido13'] = $pedido_13;
+                                       
                                         if($nChecks_13 > 3){
                                             $quant_frutas_13 = $nChecks_13 - 3;
                                         }
@@ -2089,19 +1795,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_13 == 18 || $valor_acai_13 == 35 || $valor_acai_13 == 50){
-                                        if($valor_acai_13 == 18){
-                                            $pedido_13 = "Barca Pequena";
-                                            $_SESSION['pedido13'] = $pedido_13;
-                                        }
-                                        if($valor_acai_13 == 35){
-                                            $pedido_13 = "Barca Média";
-                                            $_SESSION['pedido13'] = $pedido_13;
-                                        }
-                                        if($valor_acai_13 == 50){
-                                            $pedido_13 = "Barca Grande";
-                                            $_SESSION['pedido13'] = $pedido_13;
-                                        }
-    
+                                        
                                         if($nChecks_13 > 4){
                                             $quant_frutas_13 = $nChecks_13 - 4;
                                         }
@@ -2179,8 +1873,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 14
                             if($valor_acai_14 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_14'] = 1;
+                                
                                 echo "<br>Pedido Nº14<br>";
 
                                 if ((bool)$nChecks_14 = count($_POST['frutas_14'])) {
@@ -2192,8 +1885,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_14 . '<br />'; 
     
                                     if($valor_acai_14 == 7){
-                                        $pedido_14 = "Mini";
-                                        $_SESSION['pedido14'] = $pedido_14;
+                                       
                                         if($nChecks_14 > 1){
                                             $quant_frutas_14 = $nChecks_14 - 1;
                                         }
@@ -2209,16 +1901,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_14 == 10 || $valor_acai_14 == 14){
-                                        if($valor_acai_14 == 10){
-                                            $pedido_14 = "P";
-                                            $_SESSION['pedido14'] = $pedido_14;
-                                        }
-    
-                                        if($valor_acai_14 == 14){
-                                            $pedido_14 = "M";
-                                            $_SESSION['pedido14'] = $pedido_14;
-                                        }
-    
+                                       
                                         if($nChecks_14 > 2){
                                             $quant_frutas_14 = $nChecks_14 - 2;
                                         }
@@ -2231,8 +1914,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_14 == 23){
-                                        $pedido_14 = "G";
-                                        $_SESSION['pedido14'] = $pedido_14;
+                                        
                                         if($nChecks_14 > 3){
                                             $quant_frutas_14 = $nChecks_14 - 3;
                                         }
@@ -2245,19 +1927,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_14 == 18 || $valor_acai_14 == 35 || $valor_acai_14 == 50){
-                                        if($valor_acai_14 == 18){
-                                            $pedido_14 = "Barca Pequena";
-                                            $_SESSION['pedido14'] = $pedido_14;
-                                        }
-                                        if($valor_acai_14 == 35){
-                                            $pedido_14 = "Barca Média";
-                                            $_SESSION['pedido14'] = $pedido_14;
-                                        }
-                                        if($valor_acai_14 == 50){
-                                            $pedido_14 = "Barca Grande";
-                                            $_SESSION['pedido14'] = $pedido_14;
-                                        }
-    
+                                        
                                         if($nChecks_14 > 4){
                                             $quant_frutas_14 = $nChecks_14 - 4;
                                         }
@@ -2335,8 +2005,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 15
                             if($valor_acai_15 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_15'] = 1;
+                               
                                 echo "<br>Pedido Nº15<br>";
 
                                 if ((bool)$nChecks_15 = count($_POST['frutas_15'])) {
@@ -2348,8 +2017,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_15 . '<br />'; 
     
                                     if($valor_acai_15 == 7){
-                                        $pedido_15 = "Mini";
-                                        $_SESSION['pedido15'] = $pedido_15;
+                                       
                                         if($nChecks_15 > 1){
                                             $quant_frutas_15 = $nChecks_15 - 1;
                                         }
@@ -2365,15 +2033,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_15 == 10 || $valor_acai_15 == 14){
-                                        if($valor_acai_15 == 10){
-                                            $pedido_15 = "P";
-                                            $_SESSION['pedido15'] = $pedido_15;
-                                        }
-    
-                                        if($valor_acai_15 == 14){
-                                            $pedido_15 = "M";
-                                            $_SESSION['pedido15'] = $pedido_15;
-                                        }
     
                                         if($nChecks_15 > 2){
                                             $quant_frutas_15 = $nChecks_15 - 2;
@@ -2387,8 +2046,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_15 == 23){
-                                        $pedido_15 = "G";
-                                        $_SESSION['pedido15'] = $pedido_15;
+                                        
                                         if($nChecks_15 > 3){
                                             $quant_frutas_15 = $nChecks_15 - 3;
                                         }
@@ -2401,19 +2059,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_15 == 18 || $valor_acai_15 == 35 || $valor_acai_15 == 50){
-                                        if($valor_acai_15 == 18){
-                                            $pedido_15 = "Barca Pequena";
-                                            $_SESSION['pedido15'] = $pedido_15;
-                                        }
-                                        if($valor_acai_15 == 35){
-                                            $pedido_15 = "Barca Média";
-                                            $_SESSION['pedido15'] = $pedido_15;
-                                        }
-                                        if($valor_acai_15 == 50){
-                                            $pedido_15 = "Barca Grande";
-                                            $_SESSION['pedido15'] = $pedido_15;
-                                        }
-    
+                                        
                                         if($nChecks_15 > 4){
                                             $quant_frutas_15 = $nChecks_15 - 4;
                                         }
@@ -2491,8 +2137,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 16
                             if($valor_acai_16 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_16'] = 1;
+                               
                                 echo "<br>Pedido Nº16<br>";
 
                                 if ((bool)$nChecks_16 = count($_POST['frutas_16'])) {
@@ -2504,8 +2149,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_16 . '<br />'; 
     
                                     if($valor_acai_16 == 7){
-                                        $pedido_16 = "Mini";
-                                        $_SESSION['pedido16'] = $pedido_16;
+                                       
                                         if($nChecks_16 > 1){
                                             $quant_frutas_16 = $nChecks_16 - 1;
                                         }
@@ -2521,16 +2165,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_16 == 10 || $valor_acai_16 == 14){
-                                        if($valor_acai_16 == 10){
-                                            $pedido_16 = "P";
-                                            $_SESSION['pedido16'] = $pedido_16;
-                                        }
-    
-                                        if($valor_acai_16 == 14){
-                                            $pedido_16 = "M";
-                                            $_SESSION['pedido16'] = $pedido_16;
-                                        }
-    
+                                        
                                         if($nChecks_16 > 2){
                                             $quant_frutas_16 = $nChecks_16 - 2;
                                         }
@@ -2543,8 +2178,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_16 == 23){
-                                        $pedido_16 = "G";
-                                        $_SESSION['pedido16'] = $pedido_16;
+                                        
                                         if($nChecks_16 > 3){
                                             $quant_frutas_16 = $nChecks_16 - 3;
                                         }
@@ -2557,19 +2191,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_16 == 18 || $valor_acai_16 == 35 || $valor_acai_16 == 50){
-                                        if($valor_acai_16 == 18){
-                                            $pedido_16 = "Barca Pequena";
-                                            $_SESSION['pedido16'] = $pedido_16;
-                                        }
-                                        if($valor_acai_16 == 35){
-                                            $pedido_16 = "Barca Média";
-                                            $_SESSION['pedido16'] = $pedido_16;
-                                        }
-                                        if($valor_acai_16 == 50){
-                                            $pedido_16 = "Barca Grande";
-                                            $_SESSION['pedido16'] = $pedido_16;
-                                        }
-    
+                                        
                                         if($nChecks_16 > 4){
                                             $quant_frutas_16 = $nChecks_16 - 4;
                                         }
@@ -2647,8 +2269,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 17
                             if($valor_acai_17 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_17'] = 1;
+                                
                                 echo "<br>Pedido Nº17<br>";
 
                                 if ((bool)$nChecks_17 = count($_POST['frutas_17'])) {
@@ -2660,8 +2281,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_17 . '<br />'; 
     
                                     if($valor_acai_17 == 7){
-                                        $pedido_17 = "Mini";
-                                        $_SESSION['pedido17'] = $pedido_17;
+                                        
                                         if($nChecks_17 > 1){
                                             $quant_frutas_17 = $nChecks_17 - 1;
                                         }
@@ -2677,15 +2297,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_17 == 10 || $valor_acai_17 == 14){
-                                        if($valor_acai_17 == 10){
-                                            $pedido_17 = "P";
-                                            $_SESSION['pedido17'] = $pedido_17;
-                                        }
-    
-                                        if($valor_acai_17 == 14){
-                                            $pedido_17 = "M";
-                                            $_SESSION['pedido17'] = $pedido_17;
-                                        }
     
                                         if($nChecks_17 > 2){
                                             $quant_frutas_17 = $nChecks_17 - 2;
@@ -2699,8 +2310,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_17 == 23){
-                                        $pedido_17 = "G";
-                                        $_SESSION['pedido17'] = $pedido_17;
+                                        
                                         if($nChecks_17 > 3){
                                             $quant_frutas_17 = $nChecks_17 - 3;
                                         }
@@ -2713,18 +2323,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_17 == 18 || $valor_acai_17 == 35 || $valor_acai_17 == 50){
-                                        if($valor_acai_17 == 18){
-                                            $pedido_17 = "Barca Pequena";
-                                            $_SESSION['pedido17'] = $pedido_17;
-                                        }
-                                        if($valor_acai_17 == 35){
-                                            $pedido_17 = "Barca Média";
-                                            $_SESSION['pedido17'] = $pedido_17;
-                                        }
-                                        if($valor_acai_17 == 50){
-                                            $pedido_17 = "Barca Grande";
-                                            $_SESSION['pedido17'] = $pedido_17;
-                                        }
     
                                         if($nChecks_17 > 4){
                                             $quant_frutas_17 = $nChecks_17 - 4;
@@ -2803,8 +2401,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 18
                             if($valor_acai_18 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_18'] = 1;
+                               
                                 echo "<br>Pedido Nº18<br>";
 
                                 if ((bool)$nChecks_18 = count($_POST['frutas_18'])) {
@@ -2816,8 +2413,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_18 . '<br />'; 
     
                                     if($valor_acai_18 == 7){
-                                        $pedido_18 = "Mini";
-                                        $_SESSION['pedido18'] = $pedido_18;
+                                       
                                         if($nChecks_18 > 1){
                                             $quant_frutas_18 = $nChecks_18 - 1;
                                         }
@@ -2833,16 +2429,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_18 == 10 || $valor_acai_18 == 14){
-                                        if($valor_acai_18 == 10){
-                                            $pedido_18 = "P";
-                                            $_SESSION['pedido18'] = $pedido_18;
-                                        }
-    
-                                        if($valor_acai_18 == 14){
-                                            $pedido_18 = "M";
-                                            $_SESSION['pedido18'] = $pedido_18;
-                                        }
-    
+                                        
                                         if($nChecks_18 > 2){
                                             $quant_frutas_18 = $nChecks_18 - 2;
                                         }
@@ -2855,8 +2442,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_18 == 23){
-                                        $pedido_18 = "G";
-                                        $_SESSION['pedido18'] = $pedido_18;
+                                       
                                         if($nChecks_18 > 3){
                                             $quant_frutas_18 = $nChecks_18 - 3;
                                         }
@@ -2869,18 +2455,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_18 == 18 || $valor_acai_18 == 35 || $valor_acai_18 == 50){
-                                        if($valor_acai_18 == 18){
-                                            $pedido_18 = "Barca Pequena";
-                                            $_SESSION['pedido18'] = $pedido_18;
-                                        }
-                                        if($valor_acai_18 == 35){
-                                            $pedido_18 = "Barca Média";
-                                            $_SESSION['pedido18'] = $pedido_18;
-                                        }
-                                        if($valor_acai_18 == 50){
-                                            $pedido_18 = "Barca Grande";
-                                            $_SESSION['pedido18'] = $pedido_18;
-                                        }
+                                        
     
                                         if($nChecks_18 > 4){
                                             $quant_frutas_18 = $nChecks_18 - 4;
@@ -2959,8 +2534,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 19
                             if($valor_acai_19 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_19'] = 1;
+                               
                                 echo "<br>Pedido Nº17<br>";
 
                                 if ((bool)$nChecks_19 = count($_POST['frutas_19'])) {
@@ -2972,8 +2546,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_19 . '<br />'; 
     
                                     if($valor_acai_19 == 7){
-                                        $pedido_19 = "Mini";
-                                        $_SESSION['pedido19'] = $pedido_19;
+                                        
                                         if($nChecks_19 > 1){
                                             $quant_frutas_19 = $nChecks_19 - 1;
                                         }
@@ -2989,15 +2562,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_19 == 10 || $valor_acai_19 == 14){
-                                        if($valor_acai_19 == 10){
-                                            $pedido_19 = "P";
-                                            $_SESSION['pedido19'] = $pedido_19;
-                                        }
-    
-                                        if($valor_acai_19 == 14){
-                                            $pedido_19 = "M";
-                                            $_SESSION['pedido19'] = $pedido_19;
-                                        }
     
                                         if($nChecks_19 > 2){
                                             $quant_frutas_19 = $nChecks_19 - 2;
@@ -3011,8 +2575,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_19 == 23){
-                                        $pedido_19 = "G";
-                                        $_SESSION['pedido19'] = $pedido_19;
+                                       
                                         if($nChecks_19 > 3){
                                             $quant_frutas_19 = $nChecks_19 - 3;
                                         }
@@ -3025,19 +2588,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_19 == 18 || $valor_acai_19 == 35 || $valor_acai_19 == 50){
-                                        if($valor_acai_19 == 18){
-                                            $pedido_19 = "Barca Pequena";
-                                            $_SESSION['pedido19'] = $pedido_19;
-                                        }
-                                        if($valor_acai_19 == 35){
-                                            $pedido_19 = "Barca Média";
-                                            $_SESSION['pedido19'] = $pedido_19;
-                                        }
-                                        if($valor_acai_19 == 50){
-                                            $pedido_19 = "Barca Grande";
-                                            $_SESSION['pedido19'] = $pedido_19;
-                                        }
-    
+                                        
                                         if($nChecks_19 > 4){
                                             $quant_frutas_19 = $nChecks_19 - 4;
                                         }
@@ -3115,8 +2666,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             //Verificando se existe pedido 20
                             if($valor_acai_20 != 0){
-                                $_SESSION['quant_pedidos'] = 3;
-                                $_SESSION['pedido_20'] = 1;
+                                
                                 echo "<br>Pedido Nº17<br>";
 
                                 if ((bool)$nChecks_20 = count($_POST['frutas_20'])) {
@@ -3128,8 +2678,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                     print 'Total de checkboxs marcados: '. $nChecks_20 . '<br />'; 
     
                                     if($valor_acai_20 == 7){
-                                        $pedido_20 = "Mini";
-                                        $_SESSION['pedido20'] = $pedido_20;
+                                        
                                         if($nChecks_20 > 1){
                                             $quant_frutas_20 = $nChecks_20 - 1;
                                         }
@@ -3145,16 +2694,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_20 == 10 || $valor_acai_20 == 14){
-                                        if($valor_acai_20 == 10){
-                                            $pedido_20 = "P";
-                                            $_SESSION['pedido20'] = $pedido_20;
-                                        }
-    
-                                        if($valor_acai_20 == 14){
-                                            $pedido_20 = "M";
-                                            $_SESSION['pedido20'] = $pedido_20;
-                                        }
-    
+                                        
                                         if($nChecks_20 > 2){
                                             $quant_frutas_20 = $nChecks_20 - 2;
                                         }
@@ -3167,8 +2707,7 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_20 == 23){
-                                        $pedido_20 = "G";
-                                        $_SESSION['pedido20'] = $pedido_20;
+                                        
                                         if($nChecks_20 > 3){
                                             $quant_frutas_20 = $nChecks_20 - 3;
                                         }
@@ -3181,18 +2720,6 @@ date_default_timezone_set('America/Sao_Paulo');
                                         }
     
                                     }else if($valor_acai_20 == 18 || $valor_acai_20 == 35 || $valor_acai_20 == 50){
-                                        if($valor_acai_20 == 18){
-                                            $pedido_20 = "Barca Pequena";
-                                            $_SESSION['pedido20'] = $pedido_20;
-                                        }
-                                        if($valor_acai_20 == 35){
-                                            $pedido_20 = "Barca Média";
-                                            $_SESSION['pedido20'] = $pedido_20;
-                                        }
-                                        if($valor_acai_20 == 50){
-                                            $pedido_20 = "Barca Grande";
-                                            $_SESSION['pedido20'] = $pedido_20;
-                                        }
     
                                         if($nChecks_20 > 4){
                                             $quant_frutas_20 = $nChecks_20 - 4;
@@ -3395,7 +2922,6 @@ date_default_timezone_set('America/Sao_Paulo');
 
                             }
                             
-                            
 
                             $_SESSION['valor_acai'] = $valor_acai;
                             $_SESSION['valor_acai_2'] = $valor_acai_2;
@@ -3418,7 +2944,7 @@ date_default_timezone_set('America/Sao_Paulo');
                             $_SESSION['valor_acai_19'] = $valor_acai_19;
                             $_SESSION['valor_acai_20'] = $valor_acai_20;
                                 
-                            $soma =  $valor_acai + $valor_acai_2 + $valor_acai_3 + $valor_acai_4 + $valor_acai_5 + $valor_acai_6 + $valor_acai_7 + $valor_acai_8 + $valor_acai_9 + $valor_acai_10 + $valor_acai_11 + $valor_acai_12 + $valor_acai_13 + $valor_acai_14 + $valor_acai_15 + $valor_acai_16 + $valor_acai_17 + $valor_acai_18 + $valor_acai_19 + $valor_acai_20 + $quant_frutas + $quant_frutas_2 + $quant_frutas_3 + $quant_frutas_4 + $quant_frutas_5 + $quant_frutas_6 + $quant_frutas_7 + $quant_frutas_8 + $quant_frutas_9 + $quant_frutas_10 + $quant_frutas_11 + $quant_frutas_12 + $quant_frutas_13 + $quant_frutas_14 + $quant_frutas_14 + $quant_frutas_16 + $quant_frutas_17 + $quant_frutas_18 + $quant_frutas_19 + $quant_frutas_20 + $quant_caldas + $quant_caldas_2 +  $quant_caldas_3 + $quant_caldas_4 + $quant_caldas_5 + $quant_caldas_6 + $quant_caldas_7 + $quant_caldas_8 + $quant_caldas_9 + $quant_caldas_10 + $quant_caldas_11 + $quant_caldas_12 + $quant_caldas_13 + $quant_caldas_14 + $quant_caldas_15 + $quant_caldas_16 + $quant_caldas_17 + $quant_caldas_18 + $quant_caldas_19 + $quant_caldas_20 + $quant_complementos + $quant_complementos_2 + $quant_complementos_3 + $quant_complementos_4 + $quant_complementos_5 + $quant_complementos_6 + $quant_complementos_7 + $quant_complementos_8 + $quant_complementos_9 + $quant_complementos_10 + $quant_complementos_11 + $quant_complementos_12 + $quant_complementos_13 + $quant_complementos_14 + $quant_complementos_15 + $quant_complementos_16 + $quant_complementos_17 + $quant_complementos_18 + $quant_complementos_19 + $quant_complementos_20 + $quant_sorvetes + $quant_sorvetes_2 + $quant_sorvetes_3 + $quant_sorvetes_4 + $quant_sorvetes_5 + $quant_sorvetes_6 + $quant_sorvetes_7 + $quant_sorvetes_8 + $quant_sorvetes_9 + $quant_sorvetes_10 + $quant_sorvetes_11 + $quant_sorvetes_12 + $quant_sorvetes_13 + $quant_sorvetes_14 + $quant_sorvetes_15 + $quant_sorvetes_16 + $quant_sorvetes_17 + $quant_sorvetes_18 + $quant_sorvetes_19 + $quant_sorvetes_20 + $frete + (0.50 * $vezes) - 1;
+                            $soma =  $valor_acai + $valor_acai_2 + $valor_acai_3 + $valor_acai_4 + $valor_acai_5 + $valor_acai_6 + $valor_acai_7 + $valor_acai_8 + $valor_acai_9 + $valor_acai_10 + $valor_acai_11 + $valor_acai_12 + $valor_acai_13 + $valor_acai_14 + $valor_acai_15 + $valor_acai_16 + $valor_acai_17 + $valor_acai_18 + $valor_acai_19 + $valor_acai_20 + $quant_frutas + $quant_frutas_2 + $quant_frutas_3 + $quant_frutas_4 + $quant_frutas_5 + $quant_frutas_6 + $quant_frutas_7 + $quant_frutas_8 + $quant_frutas_9 + $quant_frutas_10 + $quant_frutas_11 + $quant_frutas_12 + $quant_frutas_13 + $quant_frutas_14 + $quant_frutas_14 + $quant_frutas_16 + $quant_frutas_17 + $quant_frutas_18 + $quant_frutas_19 + $quant_frutas_20 + $quant_caldas + $quant_caldas_2 +  $quant_caldas_3 + $quant_caldas_4 + $quant_caldas_5 + $quant_caldas_6 + $quant_caldas_7 + $quant_caldas_8 + $quant_caldas_9 + $quant_caldas_10 + $quant_caldas_11 + $quant_caldas_12 + $quant_caldas_13 + $quant_caldas_14 + $quant_caldas_15 + $quant_caldas_16 + $quant_caldas_17 + $quant_caldas_18 + $quant_caldas_19 + $quant_caldas_20 + $quant_complementos + $quant_complementos_2 + $quant_complementos_3 + $quant_complementos_4 + $quant_complementos_5 + $quant_complementos_6 + $quant_complementos_7 + $quant_complementos_8 + $quant_complementos_9 + $quant_complementos_10 + $quant_complementos_11 + $quant_complementos_12 + $quant_complementos_13 + $quant_complementos_14 + $quant_complementos_15 + $quant_complementos_16 + $quant_complementos_17 + $quant_complementos_18 + $quant_complementos_19 + $quant_complementos_20 + $quant_sorvetes + $quant_sorvetes_2 + $quant_sorvetes_3 + $quant_sorvetes_4 + $quant_sorvetes_5 + $quant_sorvetes_6 + $quant_sorvetes_7 + $quant_sorvetes_8 + $quant_sorvetes_9 + $quant_sorvetes_10 + $quant_sorvetes_11 + $quant_sorvetes_12 + $quant_sorvetes_13 + $quant_sorvetes_14 + $quant_sorvetes_15 + $quant_sorvetes_16 + $quant_sorvetes_17 + $quant_sorvetes_18 + $quant_sorvetes_19 + $quant_sorvetes_20 + $frete + (0.50 * $vezes);
                             $ped_1_db = $valor_acai + $quant_frutas + $quant_caldas + $quant_complementos + $quant_sorvetes + $frete;
                             $valor_total = number_format($soma, 2, '.', '');
                             $_SESSION['total'] = $valor_total;
@@ -3431,7 +2957,8 @@ date_default_timezone_set('America/Sao_Paulo');
                             $cod_pedido = mysqli_insert_id($link);
                             $_SESSION['cod_pedido'] = $cod_pedido;
 
-                            //header("Location:confirmar_pedido.php");
+                            header("Location:confirmar_pedido.php");
+                           
                             
                             
                             

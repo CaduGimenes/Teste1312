@@ -82,7 +82,7 @@
                         </div>
                         <nav class="menu">
                             <ul class="sidebar-menu metismenu" id="sidebar-menu">
-                                <li class="active">
+                                <li>
                                     <a href="index.php">
                                         <i class="fa fa-home"></i> Painel </a>
                                 </li>
@@ -91,7 +91,7 @@
                                         <i class="fa fa-globe"></i> Gerenciar Endereços
                                     </a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="clientes.php">
                                         <i class="fa fa-group"></i> Clientes
                                     </a>

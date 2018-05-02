@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Pedido</title>
+        <title>Realizar Pedido</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon" />
@@ -237,12 +237,12 @@
                                                             <input id="telefone" name="telefone" type="text" class="form-control underlined" placeholder="Telefone" maxlength="11" required> </div>
                                                             <p style="font-size:12px;">Para o uso correto do sistema colocar <u>Celular com</u> <font color="Redo">13</font> e <u>Telefone sem</u> <font color="Red">13</font></p>
                                                 </div>
-                                                <div class="col-6 col-md-4">
+                                                <div class="col-6 col-md-9">
                                                     <div class=""></div>
                                                 </div>
-                                                <div class="col-6 col-md-4">
+                                                <div class="col-6 col-md-3">
                                                     <section class="section">
-                                                        <button type="submit" class="btn btn-primary-outline">Próximo</button>
+                                                        <button type="submit" class="btn btn-primary-outline">Avançar</button>
                                                     </section>
                                                     </form>
                                                 </div>

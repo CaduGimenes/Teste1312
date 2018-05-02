@@ -25,26 +25,26 @@
     $sum_total = number_format($valor_total, 2, '.', ' ');
 
 
-    $tamanho = $_SESSION['tamanho_acai'];
-    $tamanho_2 = $_SESSION['tamanho_acai_2'];
-    $tamanho_3 = $_SESSION['tamanho_acai_3'];
-    $tamanho_4 = $_SESSION['tamanho_acai_4'];
-    $tamanho_5 = $_SESSION['tamanho_acai_5'];
-    $tamanho_6 = $_SESSION['tamanho_acai_6'];
-    $tamanho_7 = $_SESSION['tamanho_acai_7'];
-    $tamanho_8 = $_SESSION['tamanho_acai_8'];
-    $tamanho_9 = $_SESSION['tamanho_acai_9'];
-    $tamanho_10 = $_SESSION['tamanho_acai_10'];
-    $tamanho_11= $_SESSION['tamanho_acai_11'];
-    $tamanho_12 = $_SESSION['tamanho_acai_12'];
-    $tamanho_13 = $_SESSION['tamanho_acai_13'];
-    $tamanho_14 = $_SESSION['tamanho_acai_14'];
-    $tamanho_15 = $_SESSION['tamanho_acai_15'];
-    $tamanho_16 = $_SESSION['tamanho_acai_16'];
-    $tamanho_17 = $_SESSION['tamanho_acai_17'];
-    $tamanho_18 = $_SESSION['tamanho_acai_18'];
-    $tamanho_19 = $_SESSION['tamanho_acai_19'];
-    $tamanho_20 = $_SESSION['tamanho_acai_20'];
+    $tamanho = $_SESSION['pedido1'];
+    $tamanho_2 = $_SESSION['pedido2'];
+    $tamanho_3 = $_SESSION['pedido3'];
+    $tamanho_4 = $_SESSION['pedido4'];
+    $tamanho_5 = $_SESSION['pedido5'];
+    $tamanho_6 = $_SESSION['pedido6'];
+    $tamanho_7 = $_SESSION['pedido7'];
+    $tamanho_8 = $_SESSION['pedido8'];
+    $tamanho_9 = $_SESSION['pedido9'];
+    $tamanho_10 = $_SESSION['pedido10'];
+    $tamanho_11= $_SESSION['pedido11'];
+    $tamanho_12 = $_SESSION['pedido12'];
+    $tamanho_13 = $_SESSION['pedido13'];
+    $tamanho_14 = $_SESSION['pedido14'];
+    $tamanho_15 = $_SESSION['pedido15'];
+    $tamanho_16 = $_SESSION['pedido16'];
+    $tamanho_17 = $_SESSION['pedido17'];
+    $tamanho_18 = $_SESSION['pedido18'];
+    $tamanho_19 = $_SESSION['pedido19'];
+    $tamanho_20 = $_SESSION['pedido20'];
 
     $frutas = $_SESSION['frutasBD'];
     $frutas_2 = $_SESSION['frutasBD_2'];
@@ -147,7 +147,7 @@
 
     if($debito == "debito"){
         $formaPagamento = "Debito";
-        $print_sub = "--";
+        $print_sub = $valor_total;
     
     }else{
         $formaPagamento = "Dinheiro";
